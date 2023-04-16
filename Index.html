@@ -1,19 +1,17 @@
-Here's an example program in JavaScript that runs in a browser and retrieves data from a server using HTTP and displays it in the browser:
-
-php
-Copy code
 <html>
   <head>
     <title>HTTP Data Retrieval Example</title>
   </head>
   <body>
-    <h1>HTTP Data Retrieval Example 12</h1>
+    <h1>HTTP Data Retrieval Example</h1>
     <div id="data"></div>
     <script>
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', 'http://warn1234.azurewebsites.net/api/Products/SC0032kLVfg', true);
-	// xhr.open('GET', 'https://api.publicapis.org/entries', true); 
+      xhr.open('GET', 'https://warn1234.azurewebsites.net/api/Products/SC0032kLVfg', true);
       xhr.onload = function () {
+        console.log("Response status: " + xhr.status);
+        console.log("Response type: " + xhr.responseType);
+        console.log("Response text: " + xhr.responseText);
         if (xhr.status === 200) {
           // The data was retrieved successfully, so display it in the browser
           var data = xhr.responseText;
@@ -26,7 +24,14 @@ Copy code
           dataDiv.innerHTML = 'Error retrieving data: ' + xhr.statusText;
         }
       };
+      xhr.onerror = function () {
+        console.log("Error occurred while retrieving data");
+        var dataDiv = document.getElementById('data');
+        dataDiv.innerHTML = 'Error retrieving data: ' + xhr.statusText;
+      };
       xhr.send();
     </script>
   </body>
 </html>
+
+
