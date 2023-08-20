@@ -20,8 +20,6 @@
       /* Style the data display */
       #data-display {
         margin-top: 20px;
-        display: flex; /* Add flex display to arrange items horizontally */
-        justify-content: space-between; /* Space items evenly */
       }
 
       /* Style the button container */
@@ -30,36 +28,27 @@
       }
 
       /* Style the fuel temperature container */
-      #fuel-temperature-container,
-      #battery-capacity-container {
+      #fuel-temperature-container {
+        margin-top: 0.5in; /* Adjust to position the text box below the graph */
         color: black;
         font-weight: bold;
-      }
-
-      /* Style the text input containers */
-      .text-input-container {
-        margin-top: 0.5in;
       }
     </style>
   </head>
   <body>
     <h1>Mercury Fuel Systems</h1>
     <div id="data-display">
-      <div id="fuel-temperature-container">
-        <p>Fuel Temperature</p>
-        <input type="text" id="fuel-temperature" readonly />
-      </div>
-      <!-- Second textbox for Battery Capacity -->
-      <div id="battery-capacity-container" class="text-input-container">
-        <p>Battery Capacity</p>
-        <input type="text" id="battery-capacity" readonly value="95%" />
-      </div>
+      <div id="data"></div>
     </div>
     <div id="button-container">
       <button onclick="displayDataAndGraph()">Display Data and Graph</button>
     </div>
     <div id="graph-container">
       <canvas id="myChart"></canvas>
+    </div>
+    <div id="fuel-temperature-container">
+      <p>Fuel Temperature</p>
+      <input type="text" id="fuel-temperature" readonly />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -115,7 +104,192 @@
       // Function to calculate TankTempAD based on fueltemp
       function calculateTankTempAD(fueltemp) {
         var TankTemp = 0;
-        // ... (rest of your TankTemp calculation code)
+            if (fueltemp < 2973) TankTemp = -30; //882.20; // -30
+            else if (fueltemp < 2975) TankTemp = -29.5; // 884.2 ; // -29.5
+            else if (fueltemp < 2977) TankTemp = -29; // 886.20; // -29
+            else if (fueltemp < 2979) TankTemp = -28.5;//	888.15; // -28.5
+            else if (fueltemp < 2981) TankTemp = -28; //890.10; // -28	
+            else if (fueltemp < 3042) TankTemp = -10;     //960.90; // -10	
+            else if (fueltemp < 3045) TankTemp = -9;      //964.80; // -9
+            else if (fueltemp < 3046) TankTemp = -8.5;    //966.75; // -8.5
+            else if (fueltemp < 3048) TankTemp = -8;  //968.70; // -8
+            else if (fueltemp < 3049) TankTemp = -7.5;    //970.65; // -7.5
+            else if (fueltemp < 3051) TankTemp = -7;  //972.60; // -7
+            else if (fueltemp < 3053) TankTemp = -6.5;    //974.55; // -6.5
+            else if (fueltemp < 3054) TankTemp = -6;      //976.50; // -6
+            else if (fueltemp < 3056) TankTemp = -5.5;    //978.45; // -5.5
+            else if (fueltemp < 3057) TankTemp = -5;      //980.40; // -5
+            else if (fueltemp < 3059) TankTemp = -4.5;    //982.40; // -4.5
+            else if (fueltemp < 3060) TankTemp = -4;      //984.40; // -4
+            else if (fueltemp < 3062) TankTemp = -3.5;    //986.35; // -3.5
+            else if (fueltemp < 3063) TankTemp = -3;      //988.30; // -3
+            else if (fueltemp < 3065) TankTemp = -2.5;    //990.25; // -2.5
+            else if (fueltemp < 3066) TankTemp = -2;      //992.20; // -2
+            else if (fueltemp < 3068) TankTemp = -1.5;    //994.15; // -1.5
+            else if (fueltemp < 3069) TankTemp = -1;      //996.10; // -1
+            else if (fueltemp < 3071) TankTemp = -0.5;    //998.05; // -0.5
+            else if (fueltemp < 3073) TankTemp = 0;       //1000.00; // 0
+            else if (fueltemp < 3074) TankTemp = 0.5; //1001.95; // 0.5
+            else if (fueltemp < 3075) TankTemp = 1;       //1003.90; // 1
+            else if (fueltemp < 3077) TankTemp = 1.5;     //1005.85; // 1.5
+            else if (fueltemp < 3078) TankTemp = 2;       //1007.80; // 2
+            else if (fueltemp < 3080) TankTemp = 2.5; //1009.35; // 2.5
+            else if (fueltemp < 3081) TankTemp = 3;       //1011.70; // 3
+            else if (fueltemp < 3083) TankTemp = 3.5; //1013.65; // 3.5
+            else if (fueltemp < 3084) TankTemp = 4;       //1015.60; // 4
+            else if (fueltemp < 3086) TankTemp = 4.5; //1017.55; // 4.5
+            else if (fueltemp < 3087) TankTemp = 5;       //1019.50; // 5
+            else if (fueltemp < 3089) TankTemp = 5.5;     //1021.45; // 5.5
+            else if (fueltemp < 3090) TankTemp = 6;       //1023.40; // 6
+            else if (fueltemp < 3092) TankTemp = 6.5; //1025.35; // 6.5
+            else if (fueltemp < 3093) TankTemp = 7;       //1027.30; // 7
+            else if (fueltemp < 3094) TankTemp = 7.5; //1029.25; // 7.5
+            else if (fueltemp < 3096) TankTemp = 8;       //1031.20; // 8
+            else if (fueltemp < 3097) TankTemp = 8.5; //1033.15; // 8.5
+            else if (fueltemp < 3099) TankTemp = 9;       //1035.10; // 9 
+            else if (fueltemp < 3100) TankTemp = 9.5; //1037.05; // 9.5
+            else if (fueltemp < 3101) TankTemp = 10;      //1039.00; // 10
+            else if (fueltemp < 3103) TankTemp = 10.5;    //1040.95; // 10.5
+            else if (fueltemp < 3104) TankTemp = 11;      //1042.90; // 11
+            else if (fueltemp < 3106) TankTemp = 11.5;    //1044.85; // 11.5
+            else if (fueltemp < 3107) TankTemp = 12;      //1046.80; // 12
+            else if (fueltemp < 3109) TankTemp = 12.5;    //1048.75; // 12.5
+            else if (fueltemp < 3110) TankTemp = 13;      //1050.70; // 13
+            else if (fueltemp < 3111) TankTemp = 13.5;    //1052.65; // 13.5
+            else if (fueltemp < 3113) TankTemp = 14;      //1054.60; // 14
+            else if (fueltemp < 3114) TankTemp = 14.5;    //1056.55; // 14.5
+            else if (fueltemp < 3116) TankTemp = 15;      //1058.50; // 15
+            else if (fueltemp < 3117) TankTemp = 15.5;    //1060.45; // 15.5
+            else if (fueltemp < 3118) TankTemp = 16;      //1062.40; // 16
+            else if (fueltemp < 3119) TankTemp = 16.5;    //1064.35; // 16.5
+            else if (fueltemp < 3121) TankTemp = 17;      //1066.30; // 17
+            else if (fueltemp < 3122) TankTemp = 17.5;    //1068.25; // 17.5
+            else if (fueltemp < 3124) TankTemp = 18;      //1070.20; // 18
+            else if (fueltemp < 3125) TankTemp = 18.5;    //1072.1; // 18.5
+            else if (fueltemp < 3126) TankTemp = 19;      //1074.00; // 19
+            else if (fueltemp < 3128) TankTemp = 19.5;    //1075.95; // 19.5
+            else if (fueltemp < 3129) TankTemp = 20;		//1077.90; // 20
+            else if (fueltemp < 3130) TankTemp = 20.5;    // 1079.85
+            else if (fueltemp < 3132) TankTemp = 21;      // 1081.80
+            else if (fueltemp < 3133) TankTemp = 21.5;    // 1083.75
+            else if (fueltemp < 3134) TankTemp = 22;      //1085.70
+            else if (fueltemp < 3136) TankTemp = 22.5;    // 1087.65
+            else if (fueltemp < 3137) TankTemp = 23;      // 1089.60
+            else if (fueltemp < 3138) TankTemp = 23.5;    // 1091.55
+            else if (fueltemp < 3140) TankTemp = 24;  //1093.50
+            else if (fueltemp < 3141) TankTemp = 24.5;    // 1095.4
+            else if (fueltemp < 3142) TankTemp = 25;      //1097.30
+            else if (fueltemp < 3143) TankTemp = 25.5;    // 1099.3	
+            else if (fueltemp < 3145) TankTemp = 26;      //1101.20	
+            else if (fueltemp < 3146) TankTemp = 26.5;    // 1103.15
+            else if (fueltemp < 3147) TankTemp = 27;      //1105.10
+            else if (fueltemp < 3149) TankTemp = 27.5;    // 1107.05
+            else if (fueltemp < 3150) TankTemp = 28;      // 1109.00
+            else if (fueltemp < 3151) TankTemp = 28.5;    // 1110.95
+            else if (fueltemp < 3152) TankTemp = 29;  // 1112.90
+            else if (fueltemp < 3154) TankTemp = 29.5;    // 1114.8
+            else if (fueltemp < 3155) TankTemp = 30;      // 1116.70
+            else if (fueltemp < 3157) TankTemp = 31;      // 1120.60	
+            else if (fueltemp < 3158) TankTemp = 31.5;    // 1122.5
+            else if (fueltemp < 3160) TankTemp = 32;      // 1124.50	
+            else if (fueltemp < 3161) TankTemp = 32.5; // 1126.4
+            else if (fueltemp < 3162) TankTemp = 33;      // 1128.30	
+            else if (fueltemp < 3164) TankTemp = 33.5; // 
+            else if (fueltemp < 3165) TankTemp = 34;      // 1132.20
+            else if (fueltemp < 3166) TankTemp = 34.5;    // 1133
+            else if (fueltemp < 3167) TankTemp = 35;      // 1136.10	
+            else if (fueltemp < 3169) TankTemp = 35.5;    //
+            else if (fueltemp < 3170) TankTemp = 36;      // 1140.00	
+            else if (fueltemp < 3171) TankTemp = 36.5;
+            else if (fueltemp < 3172) TankTemp = 37;      //1143.80	
+            else if (fueltemp < 3173) TankTemp = 37.5;
+            else if (fueltemp < 3175) TankTemp = 38;     // 1147.70
+            else if (fueltemp < 3176) TankTemp = 38.5;
+            else if (fueltemp < 3177) TankTemp = 39;      //  1151.50
+            else if (fueltemp < 3178) TankTemp = 39.5;
+            else if (fueltemp < 3179) TankTemp = 40;     //  1155.40	
+            else if (fueltemp < 3181) TankTemp = 40.5;     //
+            else if (fueltemp < 3182) TankTemp = 41;     //1159.30
+            else if (fueltemp < 3183) TankTemp = 41.5;     //
+            else if (fueltemp < 3184) TankTemp = 42;     //	1163.10	
+            else if (fueltemp < 3185) TankTemp = 42.5;     //
+            else if (fueltemp < 3186) TankTemp = 43;     //1167.00
+            else if (fueltemp < 3188) TankTemp = 43.5;     //	
+            else if (fueltemp < 3189) TankTemp = 44;     //1170.80
+            else if (fueltemp < 3190) TankTemp = 44.5;     //	
+            else if (fueltemp < 3191) TankTemp = 45;     //1174.70	
+            else if (fueltemp < 3192) TankTemp = 45.5;     //
+            else if (fueltemp < 3193) TankTemp = 46;     //1178.60
+            else if (fueltemp < 3195) TankTemp = 46.5;     //
+            else if (fueltemp < 3196) TankTemp = 47;     //	1182.40	
+            else if (fueltemp < 3197) TankTemp = 47.5;   //
+            else if (fueltemp < 3198) TankTemp = 48;     //1186.30
+            else if (fueltemp < 3199) TankTemp = 48.5;     //	
+            else if (fueltemp < 3200) TankTemp = 49;     //1190.10
+            else if (fueltemp < 3201) TankTemp = 49.5;     //
+            else if (fueltemp < 3203) TankTemp = 50;      //1194.00
+            else if (fueltemp < 3204) TankTemp = 51.5;     //	
+            else if (fueltemp < 3205) TankTemp = 51;     //1197.80	
+            else if (fueltemp < 3206) TankTemp = 51.5;     //
+            else if (fueltemp < 3207) TankTemp = 52;     //1201.70
+            else if (fueltemp < 3208) TankTemp = 52.5;     //
+            else if (fueltemp < 3209) TankTemp = 53;     //	1205.50	
+            else if (fueltemp < 3210) TankTemp = 53.5;     //
+            else if (fueltemp < 3211) TankTemp = 54;     //1209.40
+            else if (fueltemp < 3212) TankTemp = 54.5;     //	
+            else if (fueltemp < 3214) TankTemp = 55;     //	1213.20	
+            else if (fueltemp < 3215) TankTemp = 55.5;     //
+            else if (fueltemp < 3216) TankTemp = 56;     //1217.10
+            else if (fueltemp < 3217) TankTemp = 56.5;     //
+            else if (fueltemp < 3218) TankTemp = 57;     //	1220.90
+            else if (fueltemp < 3219) TankTemp = 57.5;     //
+            else if (fueltemp < 3220) TankTemp = 58;     // 1224.70
+            else if (fueltemp < 3221) TankTemp = 58.5;     //
+            else if (fueltemp < 3222) TankTemp = 59;     //	1228.60
+            else if (fueltemp < 3223) TankTemp = 59.5;     //
+            else if (fueltemp < 3224) TankTemp = 60;          // 1232.40	
+            else if (fueltemp < 3225) TankTemp = 60.5;                //
+            else if (fueltemp < 3227) TankTemp = 61;     //1236.30	
+            else if (fueltemp < 3228) TankTemp = 61.5;     //
+            else if (fueltemp < 3229) TankTemp = 62;     //1240.10	
+            else if (fueltemp < 3230) TankTemp = 63;     // 1243.90	
+            else if (fueltemp < 3232) TankTemp = 64;     //1247.80	
+            else if (fueltemp < 3234) TankTemp = 65;     //1251.60	
+            else if (fueltemp < 3237) TankTemp = 66;     //1255.40	
+            else if (fueltemp < 3239) TankTemp = 67;    //1259.30	
+            else if (fueltemp < 3241) TankTemp = 68;     //1263.10	
+            else if (fueltemp < 3243) TankTemp = 69;     //1266.90
+            else if (fueltemp < 3245) TankTemp = 70;      //70
+            else if (fueltemp < 3247) TankTemp = 71;     //1274.60
+            else if (fueltemp < 3249) TankTemp = 72;     //	1278.40	
+            else if (fueltemp < 3251) TankTemp = 73;     //1282.20	
+            else if (fueltemp < 3253) TankTemp = 74;     //1286.10	
+            else if (fueltemp < 3255) TankTemp = 75;     //1289.90	
+            else if (fueltemp < 3257) TankTemp = 76;     //1293.70	
+            else if (fueltemp < 3259) TankTemp = 77;     //1297.50	
+            else if (fueltemp < 3261) TankTemp = 78;     //1301.30	
+            else if (fueltemp < 3263) TankTemp = 79;     //1305.20
+            else if (fueltemp < 3265) TankTemp = 80;          //1309.00
+            else if (fueltemp < 3267) TankTemp = 81;     //	1312.80
+            else if (fueltemp < 3269) TankTemp = 82;     //	1316.60	
+            else if (fueltemp < 3271) TankTemp = 83;     //1320.40	
+            else if (fueltemp < 3273) TankTemp = 84;     //1324.20	
+            else if (fueltemp < 3275) TankTemp = 85;     //1328.00	
+            else if (fueltemp < 3276) TankTemp = 86;     //1331.80	
+            else if (fueltemp < 3278) TankTemp = 87;     //1335.70	
+            else if (fueltemp < 3280) TankTemp = 88;     //1339.50	
+            else if (fueltemp < 3282) TankTemp = 89;     //1343.30
+            else if (fueltemp < 3284) TankTemp = 90;     //1347.10	
+            else if (fueltemp < 3286) TankTemp = 91;     //1350.90	
+            else if (fueltemp < 3288) TankTemp = 92;     //1354.70
+            else if (fueltemp < 3289) TankTemp = 93;     //	1358.50	
+            else if (fueltemp < 3291) TankTemp = 94;     //1362.30	
+            else if (fueltemp < 3293) TankTemp = 95;     //1366.10	
+            else if (fueltemp < 3295) TankTemp = 96;     //1369.90	
+            else if (fueltemp < 3297) TankTemp = 97;     //1373.70	
+            else if (fueltemp < 3298) TankTemp = 98;     //1377.50	
+            else if (fueltemp < 3300) TankTemp = 99;     //1381.30
+            else TankTemp = 100;
         return TankTemp;
       }
 
