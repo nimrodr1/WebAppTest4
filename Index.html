@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>HTTP Data Retrieval Example</title>
+    <title>Mercury Fuel Systems</title>
     <style>
       body {
         background-color: green;
@@ -8,8 +8,9 @@
     </style>
   </head>
   <body>
-    <h1>HTTP Data Retrieval Example</h1>
+    <h1>Mercury Fuel Systems</h1>
     <div id="data"></div>
+    <button onclick="getData()">Get Data</button>
     <script>
       function getData() {
         var xhr = new XMLHttpRequest();
@@ -37,13 +38,6 @@
         };
         xhr.send();
       }
-      getData(); // Call getData function once on page load
-      setInterval(getData, 30000); // Refresh the data every 30 seconds
     </script>
   </body>
 </html>
-
-
-
-
-
