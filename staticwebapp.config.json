@@ -1,9 +1,0 @@
-{
-    "build": {
-        "publish": {
-            "web": "wwwroot",
-            "api": "api"
-        },
-        "output": "./dist"
-    }
-}
