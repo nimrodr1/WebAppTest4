@@ -14,75 +14,49 @@
       #graph-container {
         width: 80%;
         max-width: 600px;
-        margin-top: 1.5in; /* Adjust to position the graph below the data */
+        margin-top: 0.5in; /* Adjust to position the graph below the data */
       }
 
       /* Style the data display */
       #data-display {
         margin-top: 20px;
+        display: flex; /* Add flex display to arrange items horizontally */
+        justify-content: space-between; /* Space items evenly */
       }
 
       /* Style the button container */
       #button-container {
         margin-top: 0.5in; /* Adjust to position the button below the data */
       }
-    </style>
-  </head>
-  <body>
-    <h1>Mercury Fuel Systems</h1>
-    <div id="data-display">
-      <div id="data"></div>
-    </div>
-    <div id="button-container">
-      <button onclick="displayGraph()">Display Graph</button>
-    </div>
-    <div id="graph-container">
-      <canvas id="myChart"></canvas>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      // Function to display a sample graph
-      function displayGraph() {
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-          type: 'line',
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Mercury Fuel Systems</title>
-    <style>
-      body {
-        background-color: green;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+      /* Style the fuel temperature container */
+      #fuel-temperature-container,
+      #battery-capacity-container {
+        color: black;
+        font-weight: bold;
       }
 
-      /* Style the graph container */
-      #graph-container {
-        width: 80%;
-        max-width: 600px;
-        margin-top: 1.5in; /* Adjust to position the graph below the data */
-      }
-
-      /* Style the data display */
-      #data-display {
-        margin-top: 20px;
-      }
-
-      /* Style the button container */
-      #button-container {
-        margin-top: 0.5in; /* Adjust to position the button below the data */
+      /* Style the text input containers */
+      .text-input-container {
+        margin-top: 0.5in;
       }
     </style>
   </head>
   <body>
     <h1>Mercury Fuel Systems</h1>
     <div id="data-display">
-      <div id="data"></div>
+      <div id="fuel-temperature-container">
+        <p>Fuel Temperature</p>
+        <input type="text" id="fuel-temperature" readonly />
+      </div>
+      <!-- Second textbox for Battery Capacity -->
+      <div id="battery-capacity-container" class="text-input-container">
+        <p>Battery Capacity</p>
+        <input type="text" id="battery-capacity" readonly value="95%" />
+      </div>
     </div>
     <div id="button-container">
-      <button onclick="displayGraph()">Display Graph</button>
+      <button onclick="displayDataAndGraph()">Display Data and Graph</button>
     </div>
     <div id="graph-container">
       <canvas id="myChart"></canvas>
@@ -92,15 +66,18 @@
       // Function to fetch and display data
       async function fetchData() {
         try {
-          const response = await fetch('https://warn1234.azurewebsites.net/api/Products/SC0032kLVfg');
+          const response = await fetch(
+            'https://warn1234.azurewebsites.net/api/Products/SC0050kLVfg'
+          );
           if (response.ok) {
             const data = await response.json();
-            displayData(data);
+            return data;
           } else {
             throw new Error('Data retrieval failed');
           }
         } catch (error) {
           displayError('Error fetching data: ' + error.message);
+          return null;
         }
       }
 
@@ -110,7 +87,39 @@
         dataDiv.innerHTML = JSON.stringify(data, null, 2); // Display data as formatted JSON
       }
 
-      // Function to display a sample graph
+      // Function to extract 4 characters from data and return as decimal
+      function extractFuelTemperature(data) {
+        if (data && data.length >= 9) {
+          const commaIndex = data.indexOf(',');
+          if (commaIndex >= 0 && commaIndex + 5 < data.length) {
+            const startIndex = commaIndex + 5; // Start after the 5th character after the comma
+            const fuelTemperatureHex = data.substring(
+              startIndex,
+              startIndex + 4
+            ); // Extract 4 characters
+            const fuelTemperatureDecimal = parseInt(
+              fuelTemperatureHex,
+              16
+            ); // Convert to decimal
+            return fuelTemperatureDecimal;
+          } else {
+            displayError('Invalid data format');
+            return null;
+          }
+        } else {
+          displayError('Invalid data format');
+          return null;
+        }
+      }
+
+      // Function to calculate TankTempAD based on fueltemp
+      function calculateTankTempAD(fueltemp) {
+        var TankTemp = 0;
+        // ... (rest of your TankTemp calculation code)
+        return TankTemp;
+      }
+
+      // Function to display the graph
       function displayGraph() {
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -150,8 +159,25 @@
         });
       }
 
-      // Automatically fetch data when the page loads
-      fetchData();
+      // Function to display data, graph, and TankTempAD
+      async function displayDataAndGraph() {
+        const data = await fetchData();
+        if (data) {
+          displayData(data);
+          const fueltemp = extractFuelTemperature(data);
+          if (fueltemp !== null) {
+            const TankTempAD = calculateTankTempAD(fueltemp);
+            var fuelTemperatureInput = document.getElementById(
+              'fuel-temperature'
+            );
+            fuelTemperatureInput.value = TankTempAD; // Update the input value
+          }
+        }
+        displayGraph(); // Call the function to display the graph
+      }
+
+      // Initially fetch and display data when the page loads
+      displayDataAndGraph();
     </script>
   </body>
 </html>
