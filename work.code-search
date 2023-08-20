@@ -1,0 +1,9 @@
+# Query: work
+# ContextLines: 1
+
+6 results - 3 files
+
+.github\workflows\azure-static-web-apps-nice-pond-0c6704403.yml:
+  28            ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+  29:           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
+  30            app_location: "/" # App source code path
