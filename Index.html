@@ -3196,13 +3196,16 @@
 				if (ChargeLevel == 2)
 				{
 					if (FuelTemp == 1 && FuelLevel == 1) DataObject.Messages = '';	
+					else if (FuelTemp == 1 && FuelLevel == 4) DataObject.Messages = '';	
 					else if (FuelLevel == 2 || FuelLevel == 3 || FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
 					DataObject.Messages = DataObject.Messages + "WARNING-Vehicle Battery charge level critically low, start vehicle or charge battery immediately.";	
 					LineCount = LineCount + 7;
 				}			
 				else if (ChargeLevel == 3)
 				{
-					if (FuelLevel == 2 || FuelLevel == 3 || FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
+					if (FuelTemp == 1 && FuelLevel == 1) DataObject.Messages = '';	
+					else if (FuelTemp == 1 && FuelLevel == 4) DataObject.Messages = '';					
+					else if (FuelLevel == 2 || FuelLevel == 3 || FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
 					DataObject.Messages = DataObject.Messages + "Vehicle Battery charge level low.";	
 					LineCount = LineCount +2 ;
 				}	
