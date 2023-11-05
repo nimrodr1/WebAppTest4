@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Mercury Fuel Systems</title>
+    <title>MERCURY FUEL SYSTEMS</title>
     <style>
       body {
         background-color: green;
@@ -10,31 +10,13 @@
         align-items: center;
       }
 
-      /* Style the graph container */
-      #graph-container {
-        width: 80%;
-        max-width: 600px;
-        margin-top: 0.5in; /* Adjust to position the graph below the data */
-      }
-
-      /* Style the data display */
-      #data-display {
-        margin-top: 20px;
-      }
-
-      /* Style the button container */
-      #button-container {
-        margin-top: 0.5in; /* Adjust to position the button below the data */
-      }
-
       /* Style the fuel temperature container */
       #fuel-temperature-container {
         margin-top: 0.5in; /* Adjust to position the text box below the graph */
-        color: black;
         font-weight: bold;
         display: flex;
         flex-direction: row; /* Place text boxes in a row */
-        align-items: center;
+        align-items: flex-start;
       }
 
       /* Style the text box labels */
@@ -45,749 +27,584 @@
 
       /* Style the text boxes */
       input[type="text"] {
-	    width: 100px; // this was added to reduce the width to fit on a phone
+	    width: 102px; // this was added to reduce the width to fit on a phone was 100
         margin-bottom: 10px; /* Adjust vertical spacing between text boxes and labels */
       }
+	  
+      /* Style the text boxes */
+      input[type="textLarge"] {
+	    width: 200px; // this was added to reduce the width to fit on a phone was 100
+        margin-bottom: 10px; /* Adjust vertical spacing between text boxes and labels */
+		height: 40px;
+      }	  
+	  
+	  
+.darker-font {
+  font-weight: 700; /* Or any other value that fits your design */
+  text-transform: uppercase;
+  font-size : 12px;
+  text-align: center;
+
+}
+
+/* Apply different widths for text boxes */
+.wider-textbox {
+    width: 200px; /* Adjust the width as desired */
+}
+
+.Column-font {
+  font-weight: 700; /* Or any other value that fits your design */
+  text-transform: uppercase;
+  text-align: center;
+  font-size : 14px;
+  min-width : 102px;
+  max-height: 14px;
+}
+
+.fault-font {
+  font-weight: 700; /* Or any other value that fits your design */
+
+ // text-align: center;
+ // font-size : 14px;
+  min-width : 102px;
+  min-height: 10px; /* Set a minimum height */
+  max-height: 14px;
+}
+
+    }	  
+	  
     </style>
   </head>
   <body>
-    <h1>Mercury Fuel Systems</h1>
-
-    </div>
+    <h1>MERCURY FUEL SYSTEMS</h1>
+    </div>  
     <div id="fuel-temperature-container">
-      <label class="label">WR42____ :</label>
-      <input type="text" id="WR42TEMP" placeholder="WR42TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR42Statii" placeholder="WR42Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR42StoredFaults" placeholder="WR42StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR42FuelLevel" placeholder="WR42FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR42Charge" placeholder="WR42Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR43____ :</label>
-      <input type="text" id="WR43TEMP" placeholder="WR43TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR43Statii" placeholder="WR43Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR43StoredFaults" placeholder="WR43StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR43FuelLevel" placeholder="WR43FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR43Charge" placeholder="WR43Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR44____ :</label>
-      <input type="text" id="WR44TEMP" placeholder="WR44TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR44Statii" placeholder="WR44Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR44StoredFaults" placeholder="WR44StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR44FuelLevel" placeholder="WR44FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR44Charge" placeholder="WR44Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XEN :</label>
-      <input type="text" id="WR45TEMP" placeholder="WR45TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR45Statii" placeholder="WR45Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR45StoredFaults" placeholder="WR45StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR45FuelLevel" placeholder="WR45FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR45Charge" placeholder="WR45Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XEH :</label>
-      <input type="text" id="WR46TEMP" placeholder="WR46TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR46Statii" placeholder="WR46Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR46StoredFaults" placeholder="WR46StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR46FuelLevel" placeholder="WR46FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR46Charge" placeholder="WR46Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR47____ :</label>
-      <input type="text" id="WR47TEMP" placeholder="WR47TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR47Statii" placeholder="WR47Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR47StoredFaults" placeholder="WR47StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR47FuelLevel" placeholder="WR47FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR47Charge" placeholder="WR47Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDG :</label>
-      <input type="text" id="WR48TEMP" placeholder="WR48TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR48Statii" placeholder="WR48Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR48StoredFaults" placeholder="WR48StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR48FuelLevel" placeholder="WR48FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR48Charge" placeholder="WR48Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDP :</label>
-      <input type="text" id="WR49TEMP" placeholder="WR49TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR49Statii" placeholder="WR49Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR49StoredFaults" placeholder="WR49StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR49FuelLevel" placeholder="WR49FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR49Charge" placeholder="WR49Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDC :</label>
-      <input type="text" id="WR50TEMP" placeholder="WR50TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR50Statii" placeholder="WR50Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR50StoredFaults" placeholder="WR50StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR50FuelLevel" placeholder="WR50FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR50Charge" placeholder="WR50Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDD :</label>
-      <input type="text" id="WR51TEMP" placeholder="WR51TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR51Statii" placeholder="WR51Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR51StoredFaults" placeholder="WR51StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR51FuelLevel" placeholder="WR51FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR51Charge" placeholder="WR51Charge" />
-    </div>	
-	 <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDE :</label>
-      <input type="text" id="WR52TEMP" placeholder="WR52TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR52Statii" placeholder="WR52Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR52StoredFaults" placeholder="WR52StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR52FuelLevel" placeholder="WR52FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR52Charge" placeholder="WR52Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDM :</label>
-      <input type="text" id="WR53TEMP" placeholder="WR53TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR53Statii" placeholder="WR53Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR53StoredFaults" placeholder="WR53StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR53FuelLevel" placeholder="WR53FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR53Charge" placeholder="WR53Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDN :</label>
-      <input type="text" id="WR54TEMP" placeholder="WR54TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR54Statii" placeholder="WR54Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR54StoredFaults" placeholder="WR54StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR54FuelLevel" placeholder="WR54FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR54Charge" placeholder="WR54Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDL :</label>
-      <input type="text" id="WR55TEMP" placeholder="WR55TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR55Statii" placeholder="WR55Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR55StoredFaults" placeholder="WR55StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR55FuelLevel" placeholder="WR55FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR55Charge" placeholder="WR55Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKP :</label>
-      <input type="text" id="WR56TEMP" placeholder="WR56TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR56Statii" placeholder="WR56Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR56StoredFaults" placeholder="WR56StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR56FuelLevel" placeholder="WR56FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR56Charge" placeholder="WR56Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDO :</label>
-      <input type="text" id="WR57TEMP" placeholder="WR57TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR57Statii" placeholder="WR57Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR57StoredFaults" placeholder="WR57StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR57FuelLevel" placeholder="WR57FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR57Charge" placeholder="WR57Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV73XDK :</label>
-      <input type="text" id="WR58TEMP" placeholder="WR58TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR58Statii" placeholder="WR58Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR58StoredFaults" placeholder="WR58StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR58FuelLevel" placeholder="WR58FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR58Charge" placeholder="WR58Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKS :</label>
-      <input type="text" id="WR59TEMP" placeholder="WR59TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR59Statii" placeholder="WR59Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR59StoredFaults" placeholder="WR59StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR59FuelLevel" placeholder="WR59FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR59Charge" placeholder="WR59Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR60____ :</label>
-      <input type="text" id="WR60TEMP" placeholder="WR60TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR60Statii" placeholder="WR60Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR60StoredFaults" placeholder="WR60StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR60FuelLevel" placeholder="WR60FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR60Charge" placeholder="WR60Charge" />
+      <label class="label">Vehicle Reg </label>
+      <input type="text" id="VehTEMP" placeholder="  Fuel Temp  " class="darker-font" /> 
+      <input type="text" id="VehStrFlts" placeholder="Stored Faults"  class="darker-font" />
+      <input type="text" id="VehFuelLevel" placeholder=" FuelLevel"  class="darker-font" />
+      <input type="text" id="VehCharge" placeholder="  Charge"  class="darker-font" />
+	<textarea id="VehStatii" placeholder="  Statii  " class="Column-font"></textarea>	 	  
+    </div>		
+	  <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR42____ </label>
+      <input type="text" id="WR42TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR42StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR42FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR42Charge" placeholder="  Charge"   />
+	<textarea id="WR42Statii" placeholder="  Statii  " class="fault-font"></textarea>	 	  
     </div>		  
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR61____ :</label>
-      <input type="text" id="WR61TEMP" placeholder="WR61TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR61Statii" placeholder="WR61Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR61StoredFaults" placeholder="WR61StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR61FuelLevel" placeholder="WR61FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR61Charge" placeholder="WR61Charge" />	  
+      <label class="label">WR43____ </label>
+      <input type="text" id="WR43TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR43StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR43FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR43Charge" placeholder="  Charge"   />
+	<textarea id="WR43Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR44____</label>
+      <input type="text" id="WR44TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR44StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR44FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR44Charge" placeholder="  Charge"   />
+	<textarea id="WR44Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XEN </label>
+	  <input type="text" id="WR45TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR45StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR45FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR45Charge" placeholder="  Charge"   />
+	<textarea id="WR45Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XEH </label>
+	  <input type="text" id="WR46TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR46StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR46FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR46Charge" placeholder="  Charge"   />
+	<textarea id="WR46Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR47____</label>
+	  <input type="text" id="WR47TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR47StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR47FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR47Charge" placeholder="  Charge"   />
+	<textarea id="WR47Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XDG </label>
+	  <input type="text" id="WR48TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR48StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR48FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR48Charge" placeholder="  Charge"   />
+	<textarea id="WR48Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XDP </label>
+	  <input type="text" id="WR49TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR49StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR49FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR49Charge" placeholder="  Charge"   />
+	<textarea id="WR49Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XDC </label>
+	  <input type="text" id="WR50TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR50StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR50FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR50Charge" placeholder="  Charge"   />
+	<textarea id="WR50Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XDD </label>
+	  <input type="text" id="WR51TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR51StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR51FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR51Charge" placeholder="  Charge"   />
+	<textarea id="WR51Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>	
 	 <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR62____ :</label>
-      <input type="text" id="WR62TEMP" placeholder="WR62TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR62Statii" placeholder="WR62Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR62StoredFaults" placeholder="WR62StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR62FuelLevel" placeholder="WR62FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR62Charge" placeholder="WR62Charge" />
+      <label class="label">MV73XDE </label>
+	  <input type="text" id="WR52TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR52StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR52FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR52Charge" placeholder="  Charge"   />
+	<textarea id="WR52Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR63____ :</label>
-      <input type="text" id="WR63TEMP" placeholder="WR63TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR63Statii" placeholder="WR63Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR63StoredFaults" placeholder="WR63StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR63FuelLevel" placeholder="WR63FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR63Charge" placeholder="WR63Charge" />	
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VLB :</label>
-      <input type="text" id="WR64TEMP" placeholder="WR64TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR64Statii" placeholder="WR64Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR64StoredFaults" placeholder="WR64StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR64FuelLevel" placeholder="WR64FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR64Charge" placeholder="WR64Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR65____ :</label>
-      <input type="text" id="WR65TEMP" placeholder="WR65TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR65Statii" placeholder="WR65Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR65StoredFaults" placeholder="WR65StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR65FuelLevel" placeholder="WR65FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR65Charge" placeholder="WR65Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKM :</label>
-      <input type="text" id="WR66TEMP" placeholder="WR66TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR66Statii" placeholder="WR66Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR66StoredFaults" placeholder="WR66StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR66FuelLevel" placeholder="WR66FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR66Charge" placeholder="WR66Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR67____ :</label>
-      <input type="text" id="WR67TEMP" placeholder="WR67TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR67Statii" placeholder="WR67Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR67StoredFaults" placeholder="WR67StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR67FuelLevel" placeholder="WR67FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR67Charge" placeholder="WR67Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VLD :</label>
-      <input type="text" id="WR68TEMP" placeholder="WR68TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR68Statii" placeholder="WR68Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR68StoredFaults" placeholder="WR68StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR68FuelLevel" placeholder="WR68FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR68Charge" placeholder="WR68Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR69____ :</label>
-      <input type="text" id="WR69TEMP" placeholder="WR69TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR69Statii" placeholder="WR69Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR69StoredFaults" placeholder="WR69StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR69FuelLevel" placeholder="WR69FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR69Charge" placeholder="WR69Charge" />	  
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR70____ :</label>
-      <input type="text" id="WR70TEMP" placeholder="WR70TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR70Statii" placeholder="WR70Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR70StoredFaults" placeholder="WR70StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR70FuelLevel" placeholder="WR70FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR70Charge" placeholder="WR70Charge" />	  
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR71____ :</label>
-      <input type="text" id="WR71TEMP" placeholder="WR71TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR71Statii" placeholder="WR71Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR71StoredFaults" placeholder="WR71StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR71FuelLevel" placeholder="WR71FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR71Charge" placeholder="WR71Charge" />	  
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR72____ :</label>
-      <input type="text" id="WR72TEMP" placeholder="WR72TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR72Statii" placeholder="WR72Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR72StoredFaults" placeholder="WR72StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR72FuelLevel" placeholder="WR72FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR72Charge" placeholder="WR72Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR73____ :</label>
-      <input type="text" id="WR73TEMP" placeholder="WR73TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR73Statii" placeholder="WR73Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR73StoredFaults" placeholder="WR73StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR73FuelLevel" placeholder="WR73FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR73Charge" placeholder="WR73Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKT :</label>
-      <input type="text" id="WR74TEMP" placeholder="WR74TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR74Statii" placeholder="WR74Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR74StoredFaults" placeholder="WR74StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR74FuelLevel" placeholder="WR74FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR74Charge" placeholder="WR74Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKN :</label>
-      <input type="text" id="WR75TEMP" placeholder="WR75TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR75Statii" placeholder="WR75Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR75StoredFaults" placeholder="WR75StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR75FuelLevel" placeholder="WR75FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR75Charge" placeholder="WR75Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR76____ :</label>
-      <input type="text" id="WR76TEMP" placeholder="WR76TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR76Statii" placeholder="WR76Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR76StoredFaults" placeholder="WR76StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR76FuelLevel" placeholder="WR76FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR76Charge" placeholder="WR76Charge" />	  
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR77____ :</label>
-      <input type="text" id="WR77TEMP" placeholder="WR77TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR77Statii" placeholder="WR77Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR77StoredFaults" placeholder="WR77StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR77FuelLevel" placeholder="WR77FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR77Charge" placeholder="WR77Charge" />	  
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR78____ :</label>
-      <input type="text" id="WR78TEMP" placeholder="WR78TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR78Statii" placeholder="WR78Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR78StoredFaults" placeholder="WR78StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR78FuelLevel" placeholder="WR78FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR78Charge" placeholder="WR78Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR79____ :</label>
-      <input type="text" id="WR79TEMP" placeholder="WR79TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR79Statii" placeholder="WR79Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR79StoredFaults" placeholder="WR79StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR79FuelLevel" placeholder="WR79FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR79Charge" placeholder="WR79Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKU :</label>
-      <input type="text" id="WR80TEMP" placeholder="WR80TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR80Statii" placeholder="WR80Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR80StoredFaults" placeholder="WR80StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR80FuelLevel" placeholder="WR80FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR80Charge" placeholder="WR80Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR81____ :</label>
-      <input type="text" id="WR81TEMP" placeholder="WR81TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR81Statii" placeholder="WR81Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR81StoredFaults" placeholder="WR81StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR81FuelLevel" placeholder="WR81FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR81Charge" placeholder="WR81Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR82____ :</label>
-      <input type="text" id="WR82TEMP" placeholder="WR82TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR82Statii" placeholder="WR82Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR82StoredFaults" placeholder="WR82StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR82FuelLevel" placeholder="WR82FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR82Charge" placeholder="WR82Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR83____ :</label>
-      <input type="text" id="WR83TEMP" placeholder="WR83TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR83Statii" placeholder="WR83Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR83StoredFaults" placeholder="WR83StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR83FuelLevel" placeholder="WR83FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR83Charge" placeholder="WR83Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">MV70VKX :</label>
-      <input type="text" id="WR84TEMP" placeholder="WR84TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR84Statii" placeholder="WR84Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR84StoredFaults" placeholder="WR84StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR84FuelLevel" placeholder="WR84FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR84Charge" placeholder="WR84Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR85_____:</label>
-      <input type="text" id="WR85TEMP" placeholder="WR85TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR85Statii" placeholder="WR85Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR85StoredFaults" placeholder="WR85StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR85FuelLevel" placeholder="WR85FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR85Charge" placeholder="WR85Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR86_____:</label>
-      <input type="text" id="WR86TEMP" placeholder="WR86TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR86Statii" placeholder="WR86Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR86StoredFaults" placeholder="WR86StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR86FuelLevel" placeholder="WR86FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR86Charge" placeholder="WR86Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR87_____:</label>
-      <input type="text" id="WR87TEMP" placeholder="WR87TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR87Statii" placeholder="WR87Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR87StoredFaults" placeholder="WR87StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR87FuelLevel" placeholder="WR87FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR87Charge" placeholder="WR87Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR88_____:</label>
-      <input type="text" id="WR88TEMP" placeholder="WR88TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR88Statii" placeholder="WR88Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR88StoredFaults" placeholder="WR88StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR88FuelLevel" placeholder="WR88FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR88Charge" placeholder="WR88Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR89_____:</label>
-      <input type="text" id="WR89TEMP" placeholder="WR89TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR89Statii" placeholder="WR89Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR89StoredFaults" placeholder="WR89StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR89FuelLevel" placeholder="WR89FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR89Charge" placeholder="WR89Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR90_____:</label>
-      <input type="text" id="WR90TEMP" placeholder="WR90TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR90Statii" placeholder="WR90Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR90StoredFaults" placeholder="WR90StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR90FuelLevel" placeholder="WR90FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR90Charge" placeholder="WR90Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR91_____:</label>
-      <input type="text" id="WR91TEMP" placeholder="WR91TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR91Statii" placeholder="WR91Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR91StoredFaults" placeholder="WR91StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR91FuelLevel" placeholder="WR91FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR91Charge" placeholder="WR91Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR92_____:</label>
-      <input type="text" id="WR92TEMP" placeholder="WR92TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR92Statii" placeholder="WR92Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR92StoredFaults" placeholder="WR92StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR92FuelLevel" placeholder="WR92FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR92Charge" placeholder="WR92Charge" />
-    </div>
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR93_____:</label>
-      <input type="text" id="WR93TEMP" placeholder="WR93TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR93Statii" placeholder="WR93Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR93StoredFaults" placeholder="WR93StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR93FuelLevel" placeholder="WR93FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR93Charge" placeholder="WR93Charge" />
+      <label class="label">MV73XDM </label>
+	  <input type="text" id="WR53TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR53StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR53FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR53Charge" placeholder="  Charge"   />
+	<textarea id="WR53Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>	
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR94_____:</label>
-      <input type="text" id="WR94TEMP" placeholder="WR94TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR94Statii" placeholder="WR94Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR94StoredFaults" placeholder="WR94StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR94FuelLevel" placeholder="WR94FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR94Charge" placeholder="WR94Charge" />
+      <label class="label">MV73XDN </label>
+	  <input type="text" id="WR54TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR54StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR54FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR54Charge" placeholder="  Charge"   />
+	<textarea id="WR54Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>	
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR95_____:</label>
-      <input type="text" id="WR95TEMP" placeholder="WR95TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR95Statii" placeholder="WR95Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR95StoredFaults" placeholder="WR95StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR95FuelLevel" placeholder="WR95FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR95Charge" placeholder="WR95Charge" />
+      <label class="label">MV73XDL </label>
+	  <input type="text" id="WR55TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR55StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR55FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR55Charge" placeholder="  Charge"   />
+	<textarea id="WR55Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>	
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR96_____:</label>
-      <input type="text" id="WR96TEMP" placeholder="WR96TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR96Statii" placeholder="WR96Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR96StoredFaults" placeholder="WR96StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR96FuelLevel" placeholder="WR96FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR96Charge" placeholder="WR96Charge" />
+      <label class="label">MV70VKP </label>
+	  <input type="text" id="WR56TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR56StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR56FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR56Charge" placeholder="  Charge"   />
+	<textarea id="WR56Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XDO </label>
+	  <input type="text" id="WR57TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR57StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR57FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR57Charge" placeholder="  Charge"   />
+	<textarea id="WR57Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV73XDK </label>
+	  <input type="text" id="WR58TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR58StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR58FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR58Charge" placeholder="  Charge"   />
+	<textarea id="WR58Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
     </div>
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR97_____:</label>
-      <input type="text" id="WR97TEMP" placeholder="WR97TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR97Statii" placeholder="WR97Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR97StoredFaults" placeholder="WR97StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR97FuelLevel" placeholder="WR97FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR97Charge" placeholder="WR97Charge" />
+      <label class="label">MV70VKS</label>
+	  <input type="text" id="WR59TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR59StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR59FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR59Charge" placeholder="  Charge"   />
+	<textarea id="WR59Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>	
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR98_____:</label>
-      <input type="text" id="WR98TEMP" placeholder="WR98TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR98Statii" placeholder="WR98Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR98StoredFaults" placeholder="WR98StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR98FuelLevel" placeholder="WR98FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR98Charge" placeholder="WR98Charge" />
-    </div>	
+      <label class="label">WR60____</label>
+	  <input type="text" id="WR60TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR60StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR60FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR60Charge" placeholder="  Charge"   />
+	<textarea id="WR60Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>		  
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR99_____:</label>
-      <input type="text" id="WR99TEMP" placeholder="WR99TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR99Statii" placeholder="WR99Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR99StoredFaults" placeholder="WR99StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR99FuelLevel" placeholder="WR99FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR99Charge" placeholder="WR99Charge" />
+      <label class="label">WR61____</label>
+	  <input type="text" id="WR61TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR61StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR61FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR61Charge" placeholder="  Charge"   />
+	<textarea id="WR61Statii" placeholder="  Statii  " class="fault-font"></textarea>	   
+    </div>	
+	 <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR62____</label>
+	  <input type="text" id="WR62TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR62StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR62FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR62Charge" placeholder="  Charge"   />
+	<textarea id="WR62Statii" placeholder="  Statii  " class="fault-font"></textarea>	
     </div>
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR100____:</label>
-      <input type="text" id="WR100TEMP" placeholder="WR100TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR100Statii" placeholder="WR100Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR100StoredFaults" placeholder="WR100StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR100FuelLevel" placeholder="WR100FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR100Charge" placeholder="WR100Charge" />
-    </div>	
-    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR101____:</label>
-      <input type="text" id="WR101TEMP" placeholder="WR101TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR101Statii" placeholder="WR101Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR101StoredFaults" placeholder="WR101StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR101FuelLevel" placeholder="WR101FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR101Charge" placeholder="WR101Charge" />
+      <label class="label">WR63____</label>
+	  <input type="text" id="WR63TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR63StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR63FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR63Charge" placeholder="  Charge"   />
+	<textarea id="WR63Statii" placeholder="  Statii  " class="fault-font"></textarea>
     </div>
     <div id="fuel-temperature-container"style="margin-top: 0.1in;">
-      <label class="label">WR102____:</label>
-      <input type="text" id="WR102TEMP" placeholder="WR102TEMP" />
-      <label class="label">Statii:</label>
-      <input type="text" id="WR102Statii" placeholder="WR102Statii" />
-      <label class="label">StoredFaults:</label>
-      <input type="text" id="WR102StoredFaults" placeholder="WR102StoredFaults" />
-      <label class="label">Fuel Level:</label>
-      <input type="text" id="WR102FuelLevel" placeholder="WR102FuelLevel" />
-      <label class="label">Charge:</label>
-      <input type="text" id="WR102Charge" placeholder="WR102Charge" />
-  
-
-	
+      <label class="label">MV70VLB </label>
+	  <input type="text" id="WR64TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR64StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR64FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR64Charge" placeholder="  Charge"   />
+	<textarea id="WR64Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR65____</label>
+	  <input type="text" id="WR65TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR65StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR65FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR65Charge" placeholder="  Charge"   />
+	<textarea id="WR65Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV70VKM </label>
+	  <input type="text" id="WR66TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR66StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR66FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR66Charge" placeholder="  Charge"   />
+	<textarea id="WR66Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR67____</label>
+	  <input type="text" id="WR67TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR67StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR67FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR67Charge" placeholder="  Charge"   />
+	<textarea id="WR67Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV70VLD </label>
+	  <input type="text" id="WR68TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR68StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR68FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR68Charge" placeholder="  Charge"   />
+	<textarea id="WR68Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR69____</label>
+	  <input type="text" id="WR69TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR69StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR69FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR69Charge" placeholder="  Charge"   />
+	<textarea id="WR69Statii" placeholder="  Statii  " class="fault-font"></textarea>	   
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR70____</label>
+	  <input type="text" id="WR70TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR70StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR70FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR70Charge" placeholder="  Charge"   />
+	<textarea id="WR70Statii" placeholder="  Statii  " class="fault-font"></textarea>	  
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR71____</label>	
+	  <input type="text" id="WR71TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR71StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR71FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR71Charge" placeholder="  Charge"   />
+	<textarea id="WR71Statii" placeholder="  Statii  " class="fault-font"></textarea>	  
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR72____</label>
+	  <input type="text" id="WR72TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR72StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR72FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR72Charge" placeholder="  Charge"   />
+	<textarea id="WR72Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR73____</label>
+	  <input type="text" id="WR73TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR73StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR73FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR73Charge" placeholder="  Charge"   />
+	<textarea id="WR73Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV70VKT </label>
+	  <input type="text" id="WR74TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR74StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR74FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR74Charge" placeholder="  Charge"   />
+	<textarea id="WR74Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV70VKN </label>
+	  <input type="text" id="WR75TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR75StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR75FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR75Charge" placeholder="  Charge"   />
+	<textarea id="WR75Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR76____</label>
+	  <input type="text" id="WR76TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR76StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR76FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR76Charge" placeholder="  Charge"   />
+	<textarea id="WR76Statii" placeholder="  Statii  " class="fault-font"></textarea>	  
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR77____</label>
+	  <input type="text" id="WR77TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR77StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR77FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR77Charge" placeholder="  Charge"   />
+	<textarea id="WR77Statii" placeholder="  Statii  " class="fault-font"></textarea>		  
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR78____</label>
+	  <input type="text" id="WR78TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR78StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR78FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR78Charge" placeholder="  Charge"   />
+	<textarea id="WR78Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR79____</label>
+	  <input type="text" id="WR79TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR79StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR79FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR79Charge" placeholder="  Charge"   />
+	<textarea id="WR79Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV70VKU </label>
+	  <input type="text" id="WR80TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR80StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR80FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR80Charge" placeholder="  Charge"   />
+	<textarea id="WR80Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR81____</label>
+	  <input type="text" id="WR81TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR81StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR81FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR81Charge" placeholder="  Charge"   />
+	<textarea id="WR81Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR82____</label>
+	  <input type="text" id="WR82TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR82StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR82FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR82Charge" placeholder="  Charge"   />
+	<textarea id="WR82Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR83____</label>
+	  <input type="text" id="WR83TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR83StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR83FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR83Charge" placeholder="  Charge"   />
+	<textarea id="WR83Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">MV70VKX </label>
+	  <input type="text" id="WR84TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR84StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR84FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR84Charge" placeholder="  Charge"   />
+	<textarea id="WR84Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR85____</label>
+	  <input type="text" id="WR85TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR85StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR85FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR85Charge" placeholder="  Charge"   />
+	<textarea id="WR85Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR86____</label>
+	  <input type="text" id="WR86TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR86StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR86FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR86Charge" placeholder="  Charge"   />
+	<textarea id="WR86Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR87____</label>
+	  <input type="text" id="WR87TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR87StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR87FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR87Charge" placeholder="  Charge"   />
+	<textarea id="WR87Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR88____</label>
+	  <input type="text" id="WR88TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR88StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR88FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR88Charge" placeholder="  Charge"   />
+	<textarea id="WR88Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR89____</label>
+	  <input type="text" id="WR89TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR89StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR89FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR89Charge" placeholder="  Charge"   />
+	<textarea id="WR89Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR90____</label>
+	  <input type="text" id="WR90TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR90StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR90FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR90Charge" placeholder="  Charge"   />
+	<textarea id="WR90Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR91____</label>
+	  <input type="text" id="WR91TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR91StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR91FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR91Charge" placeholder="  Charge"   />
+	<textarea id="WR91Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR92____</label>
+	  <input type="text" id="WR92TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR92StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR92FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR92Charge" placeholder="  Charge"   />
+	<textarea id="WR92Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR93____</label>
+	  <input type="text" id="WR93TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR93StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR93FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR93Charge" placeholder="  Charge"   />
+	<textarea id="WR93Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR94____</label>
+	  <input type="text" id="WR94TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR94StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR94FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR94Charge" placeholder="  Charge"   />
+	<textarea id="WR94Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR95____</label>
+	  <input type="text" id="WR95TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR95StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR95FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR95Charge" placeholder="  Charge"   />
+	<textarea id="WR95Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR96____</label>
+	  <input type="text" id="WR96TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR96StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR96FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR96Charge" placeholder="  Charge"   />
+	<textarea id="WR96Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR97____</label>
+	  <input type="text" id="WR97TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR97StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR97FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR97Charge" placeholder="  Charge"   />
+	<textarea id="WR97Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR98____</label>
+	  <input type="text" id="WR98TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR98StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR98FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR98Charge" placeholder="  Charge"   />
+	<textarea id="WR98Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR99____</label>
+	  <input type="text" id="WR99TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR99StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR99FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR99Charge" placeholder="  Charge"   />
+	<textarea id="WR99Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR100___</label>
+	  <input type="text" id="WR100TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR100StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR100FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR100Charge" placeholder="  Charge"   />
+	<textarea id="WR100Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>	
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR101___</label>
+	  <input type="text" id="WR101TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR101StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR101FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR101Charge" placeholder="  Charge"   />
+	<textarea id="WR101Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR102___</label>
+	  <input type="text" id="WR102TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR102StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR102FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR102Charge" placeholder="  Charge"   />
+	<textarea id="WR102Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+     </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR103___</label>
+	  <input type="text" id="WR103TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR103StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR103FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR103Charge" placeholder="  Charge"   />
+	<textarea id="WR103Statii" placeholder="  Statii  " class="fault-font"></textarea>	 
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR104___</label>
+	  <input type="text" id="WR104TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR104StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR104FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR104Charge" placeholder="  Charge"   />
+	<textarea id="WR104Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR105___</label>
+	  <input type="text" id="WR105TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR105StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR105FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR105Charge" placeholder="  Charge"   />
+	<textarea id="WR105Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR106___</label>
+	  <input type="text" id="WR106TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR106StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR106FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR106Charge" placeholder="  Charge"   />
+	<textarea id="WR106Statii" placeholder="  Statii  " class="fault-font"></textarea>		
     <script>	  
       // Your JavaScript code goes here
       // Function to fetch and display data
@@ -796,7 +613,7 @@
       async function fetchDataAndDisplay() {
         try {
           const response = await fetch(
-            'https://warn1234.azurewebsites.net/api/Products/ityB190PlHg^uyN92erty111'
+            'https://warn1234.azurewebsites.net/api/Products/ityB190PlHg^uyN92erty'
           );
           if (response.ok) {
             const data = await response.json();
@@ -825,7 +642,9 @@
 			  ColourStoredFault:'white',
 			  ColourFuelLevel:'white',
 			  ColourCHARGE: 'white',
-			  FuelLevelMin: 40
+			  FuelLevelMin: 40,
+			  MinHeight : 'min-height: 28px',
+			  Messages :'OK'
 			};	
 
 		  let DataObjectOut = 
@@ -840,7 +659,9 @@
 			  ColourStoredFault:'white',
 			  ColourFuelLevel:'white',
 			  ColourCHARGE: 'white',
-			  FuelLevelMin: 40		  
+			  FuelLevelMin: 40,
+			  MinHeight : 'min-height: 28px',
+			  Messages : 'OK'
 			};	
 
 
@@ -875,9 +696,30 @@
             DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 			
 			
 			DataObjectOut = ProcessData(DataObjectIn);
+			
+			document.getElementById('VehTEMP').value =      "  Fuel Temp  ";
+			document.getElementById('VehStatii').value =    "    Status   ";
+		//	document.getElementById('VehStatii').value =    "No Active Flt" + "\n active faultsss";	
+		//	document.getElementById('VehStatii').style="font-size: 8px;";		
+			document.getElementById('VehStrFlts').value =   "Ambient Temp";			
+			document.getElementById('VehFuelLevel').value = "  Fuel Level ";
+			document.getElementById('VehCharge').value =    "Charge Level";			
+
+		
+			
+			//document.getElementById('VehTEMP').style.backgroundColor = 'green';
+			//document.getElementById('VehTEMP').style.font-weight = '900';
 	
             document.getElementById('WR42TEMP').value = DataObjectOut.FUELTEMPDATA;
             document.getElementById('WR42Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR42Statii').value = "    Statii   ";
+		//	document.getElementById('WR42Statii').style="font-size: 8px;";	
+		//	document.getElementById('WR42Statii').value = "Battery requires charging, Fuel tank level less than 40%";	
+		//	document.getElementById('WR42Statii').style="min-height: 56px;";	
+			document.getElementById('WR42Statii').value = DataObjectOut.Messages;	
+		//	document.getElementById('WR42Statii').style="min-height: 14px";	
+			document.getElementById('WR42Statii').style= DataObjectOut.MinHeight;	
+			
             document.getElementById('WR42StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR42FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR42Charge').value = DataObjectOut.CHARGEDATA;
@@ -918,7 +760,8 @@
 			document.getElementById('WR43StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR43FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR43Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
-			
+			document.getElementById('WR43Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR43Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -950,6 +793,8 @@
 			document.getElementById('WR44StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR44FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR44Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR44Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR44Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -981,7 +826,8 @@
 			document.getElementById('WR45StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR45FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR45Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
-			
+			document.getElementById('WR45Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR45Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1013,6 +859,8 @@
 			document.getElementById('WR46StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR46FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR46Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR46Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR46Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1043,7 +891,9 @@
 			document.getElementById('WR47Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR47StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR47FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR47Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;			
+			document.getElementById('WR47Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR47Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR47Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1068,7 +918,6 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR48TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR48Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR48StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR48FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR48Charge').value = DataObjectOut.CHARGEDATA;
@@ -1077,6 +926,8 @@
 			document.getElementById('WR48StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR48FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR48Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR48Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR48Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1099,7 +950,6 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR49TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR49Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR49StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR49FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR49Charge').value = DataObjectOut.CHARGEDATA;
@@ -1108,7 +958,8 @@
 			document.getElementById('WR49StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR49FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR49Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
-			
+			document.getElementById('WR49Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR49Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1130,7 +981,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR50TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR50Statii').value = DataObjectOut.STATIIDATA;	
+//            document.getElementById('WR50Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR50StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR50FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR50Charge').value = DataObjectOut.CHARGEDATA;
@@ -1139,6 +990,8 @@
 			document.getElementById('WR50StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR50FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR50Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR50Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR50Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1162,7 +1015,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR51TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR51Statii').value = DataObjectOut.STATIIDATA;	
+          //  document.getElementById('WR51Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR51StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR51FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR51Charge').value = DataObjectOut.CHARGEDATA;
@@ -1171,6 +1024,8 @@
 			document.getElementById('WR51StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR51FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR51Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR51Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR51Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1193,7 +1048,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR52TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR52Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR52Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR52StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR52FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR52Charge').value = DataObjectOut.CHARGEDATA;
@@ -1202,6 +1057,8 @@
 			document.getElementById('WR52StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR52FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR52Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR52Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR52Statii').style= DataObjectOut.MinHeight;	
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1225,7 +1082,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR53TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR53Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR53Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR53StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR53FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR53Charge').value = DataObjectOut.CHARGEDATA;
@@ -1234,6 +1091,8 @@
 			document.getElementById('WR53StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR53FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR53Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR53Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR53Statii').style= DataObjectOut.MinHeight;	
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1266,6 +1125,8 @@
 			document.getElementById('WR54StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR54FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR54Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR54Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR54Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1289,7 +1150,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR55TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR55Statii').value = DataObjectOut.STATIIDATA;	
+          //  document.getElementById('WR55Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR55StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR55FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR55Charge').value = DataObjectOut.CHARGEDATA;
@@ -1298,6 +1159,8 @@
 			document.getElementById('WR55StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR55FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR55Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR55Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR55Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1321,7 +1184,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR56TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR56Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR56Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR56StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR56FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR56Charge').value = DataObjectOut.CHARGEDATA;
@@ -1330,6 +1193,8 @@
 			document.getElementById('WR56StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR56FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR56Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR56Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR56Statii').style= DataObjectOut.MinHeight;	
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1353,7 +1218,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR57TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR57Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR57Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR57StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR57FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR57Charge').value = DataObjectOut.CHARGEDATA;
@@ -1362,6 +1227,8 @@
 			document.getElementById('WR57StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR57FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR57Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR57Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR57Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1386,7 +1253,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);
 	
             document.getElementById('WR58TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR58Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR58Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR58StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR58FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR58Charge').value = DataObjectOut.CHARGEDATA;
@@ -1395,6 +1262,8 @@
 			document.getElementById('WR58StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR58FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR58Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR58Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR58Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1419,7 +1288,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);			
 
             document.getElementById('WR59TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR59Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR59Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR59StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR59FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR59Charge').value = DataObjectOut.CHARGEDATA;
@@ -1428,6 +1297,9 @@
 			document.getElementById('WR59StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR59FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR59Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR59Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR59Statii').style= DataObjectOut.MinHeight;				
+			
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1452,7 +1324,7 @@
 
 
             document.getElementById('WR60TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR60Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR60Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR60StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR60FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR60Charge').value = DataObjectOut.CHARGEDATA;
@@ -1461,6 +1333,8 @@
 			document.getElementById('WR60StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR60FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR60Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR60Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR60Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1484,7 +1358,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);	
 
 			document.getElementById('WR61TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR61Statii').value = DataObjectOut.STATIIDATA;	
+          //  document.getElementById('WR61Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR61StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR61FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR61Charge').value = DataObjectOut.CHARGEDATA;
@@ -1492,7 +1366,9 @@
 			document.getElementById('WR61Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR61StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR61FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR61Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR61Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR61Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR61Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1515,7 +1391,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);			
 
 			document.getElementById('WR62TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR62Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR62Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR62StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR62FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR62Charge').value = DataObjectOut.CHARGEDATA;
@@ -1524,6 +1400,8 @@
 			document.getElementById('WR62StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR62FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR62Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR62Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR62Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1546,7 +1424,7 @@
 			DataObjectOut = ProcessData(DataObjectIn);	
 
 			document.getElementById('WR63TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR63Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR63Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR63StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR63FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR63Charge').value = DataObjectOut.CHARGEDATA;
@@ -1555,6 +1433,8 @@
 			document.getElementById('WR63StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR63FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR63Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR63Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR63Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1578,7 +1458,7 @@
 
 
 			document.getElementById('WR64TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR64Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR64Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR64StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR64FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR64Charge').value = DataObjectOut.CHARGEDATA;
@@ -1586,7 +1466,9 @@
 			document.getElementById('WR64Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR64StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR64FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR64Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR64Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR64Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR64Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1610,7 +1492,7 @@
 
 
 			document.getElementById('WR65TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR65Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR65Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR65StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR65FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR65Charge').value = DataObjectOut.CHARGEDATA;
@@ -1619,6 +1501,9 @@
 			document.getElementById('WR65StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR65FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR65Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR65Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR65Statii').style= DataObjectOut.MinHeight;				
+			
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1642,7 +1527,7 @@
 
 
 			document.getElementById('WR66TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR66Statii').value = DataObjectOut.STATIIDATA;	
+          //  document.getElementById('WR66Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR66StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR66FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR66Charge').value = DataObjectOut.CHARGEDATA;
@@ -1650,7 +1535,9 @@
 			document.getElementById('WR66Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR66StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR66FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR66Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR66Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR66Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR66Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1674,7 +1561,7 @@
 
 
 			document.getElementById('WR67TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR67Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR67Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR67StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR67FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR67Charge').value = DataObjectOut.CHARGEDATA;
@@ -1682,7 +1569,9 @@
 			document.getElementById('WR67Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR67StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR67FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR67Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR67Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR67Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR67Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1707,7 +1596,7 @@
 
 
 			document.getElementById('WR68TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR68Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR68Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR68StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR68FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR68Charge').value = DataObjectOut.CHARGEDATA;
@@ -1716,6 +1605,8 @@
 			document.getElementById('WR68StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR68FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR68Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR68Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR68Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1740,7 +1631,7 @@
 
 
 			document.getElementById('WR69TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR69Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR69Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR69StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR69FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR69Charge').value = DataObjectOut.CHARGEDATA;
@@ -1749,6 +1640,8 @@
 			document.getElementById('WR69StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR69FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR69Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR69Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR69Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1772,7 +1665,7 @@
 
 
 			document.getElementById('WR70TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR70Statii').value = DataObjectOut.STATIIDATA;	
+      //      document.getElementById('WR70Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR70StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR70FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR70Charge').value = DataObjectOut.CHARGEDATA;
@@ -1780,7 +1673,9 @@
 			document.getElementById('WR70Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR70StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR70FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR70Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR70Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR70Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR70Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1804,7 +1699,7 @@
 
 
 			document.getElementById('WR71TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR71Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR71Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR71StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR71FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR71Charge').value = DataObjectOut.CHARGEDATA;
@@ -1812,7 +1707,9 @@
 			document.getElementById('WR71Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR71StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR71FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR71Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR71Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR71Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR71Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1836,7 +1733,7 @@
 
 
 			document.getElementById('WR72TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR72Statii').value = DataObjectOut.STATIIDATA;	
+          //  document.getElementById('WR72Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR72StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR72FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR72Charge').value = DataObjectOut.CHARGEDATA;
@@ -1844,7 +1741,9 @@
 			document.getElementById('WR72Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR72StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR72FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR72Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR72Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR72Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR72Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1868,7 +1767,7 @@
 
 
 			document.getElementById('WR73TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR73Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR73Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR73StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR73FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR73Charge').value = DataObjectOut.CHARGEDATA;
@@ -1876,7 +1775,9 @@
 			document.getElementById('WR73Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR73StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR73FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR73Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR73Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR73Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR73Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1909,6 +1810,8 @@
 			document.getElementById('WR74StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR74FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR74Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR74Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR74Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1932,7 +1835,7 @@
 
 
 			document.getElementById('WR75TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR75Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR75Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR75StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR75FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR75Charge').value = DataObjectOut.CHARGEDATA;
@@ -1941,6 +1844,8 @@
 			document.getElementById('WR75StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR75FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR75Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR75Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR75Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -1965,7 +1870,7 @@
 
 
 			document.getElementById('WR76TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR76Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR76Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR76StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR76FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR76Charge').value = DataObjectOut.CHARGEDATA;
@@ -1974,6 +1879,8 @@
 			document.getElementById('WR76StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR76FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR76Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR76Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR76Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -1997,7 +1904,7 @@
 
 
 			document.getElementById('WR77TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR77Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR77Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR77StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR77FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR77Charge').value = DataObjectOut.CHARGEDATA;
@@ -2005,7 +1912,9 @@
 			document.getElementById('WR77Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR77StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR77FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR77Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR77Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR77Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR77Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2030,7 +1939,7 @@
 
 
 			document.getElementById('WR78TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR78Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR78Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR78StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR78FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR78Charge').value = DataObjectOut.CHARGEDATA;
@@ -2038,7 +1947,9 @@
 			document.getElementById('WR78Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR78StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR78FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR78Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;			
+			document.getElementById('WR78Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR78Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR78Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2062,7 +1973,7 @@
 
 
 			document.getElementById('WR79TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR79Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR79Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR79StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR79FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR79Charge').value = DataObjectOut.CHARGEDATA;
@@ -2070,7 +1981,9 @@
 			document.getElementById('WR79Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR79StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR79FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR79Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR79Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR79Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR79Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2094,7 +2007,7 @@
 
 
 			document.getElementById('WR80TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR80Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR80Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR80StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR80FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR80Charge').value = DataObjectOut.CHARGEDATA;
@@ -2103,6 +2016,8 @@
 			document.getElementById('WR80StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR80FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR80Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR80Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR80Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2127,7 +2042,7 @@
 
 
 			document.getElementById('WR81TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR81Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR81Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR81StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR81FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR81Charge').value = DataObjectOut.CHARGEDATA;
@@ -2136,6 +2051,8 @@
 			document.getElementById('WR81StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR81FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR81Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR81Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR81Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2160,7 +2077,7 @@
 
 
 			document.getElementById('WR82TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR82Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR82Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR82StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR82FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR82Charge').value = DataObjectOut.CHARGEDATA;
@@ -2168,7 +2085,9 @@
 			document.getElementById('WR82Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR82StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR82FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR82Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR82Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR82Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR82Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2193,7 +2112,7 @@
 
 
 			document.getElementById('WR83TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR83Statii').value = DataObjectOut.STATIIDATA;	
+      //      document.getElementById('WR83Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR83StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR83FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR83Charge').value = DataObjectOut.CHARGEDATA;
@@ -2201,7 +2120,9 @@
 			document.getElementById('WR83Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR83StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR83FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR83Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR83Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR83Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR83Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2226,7 +2147,7 @@
 
 
 			document.getElementById('WR84TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR84Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR84Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR84StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR84FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR84Charge').value = DataObjectOut.CHARGEDATA;
@@ -2234,7 +2155,9 @@
 			document.getElementById('WR84Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR84StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR84FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR84Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR84Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR84Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR84Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2259,7 +2182,7 @@
 
 
 			document.getElementById('WR85TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR85Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR85Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR85StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR85FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR85Charge').value = DataObjectOut.CHARGEDATA;
@@ -2268,6 +2191,8 @@
 			document.getElementById('WR85StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR85FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR85Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR85Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR85Statii').style= DataObjectOut.MinHeight;				
 			
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2292,7 +2217,7 @@
 
 
 			document.getElementById('WR86TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR86Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR86Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR86StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR86FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR86Charge').value = DataObjectOut.CHARGEDATA;
@@ -2300,7 +2225,9 @@
 			document.getElementById('WR86Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR86StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR86FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR86Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR86Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR86Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR86Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2325,7 +2252,7 @@
 
 
 			document.getElementById('WR87TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR87Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR87Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR87StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR87FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR87Charge').value = DataObjectOut.CHARGEDATA;
@@ -2333,7 +2260,9 @@
 			document.getElementById('WR87Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR87StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR87FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR87Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;			
+			document.getElementById('WR87Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR87Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR87Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2358,7 +2287,7 @@
 
 
 			document.getElementById('WR88TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR88Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR88Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR88StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR88FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR88Charge').value = DataObjectOut.CHARGEDATA;
@@ -2366,7 +2295,9 @@
 			document.getElementById('WR88Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR88StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR88FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR88Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR88Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR88Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR88Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2391,7 +2322,7 @@
 
 
 			document.getElementById('WR89TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR89Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR89Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR89StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR89FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR89Charge').value = DataObjectOut.CHARGEDATA;
@@ -2400,6 +2331,8 @@
 			document.getElementById('WR89StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR89FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR89Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR89Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR89Statii').style= DataObjectOut.MinHeight;				
 
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2424,7 +2357,7 @@
 
 
 			document.getElementById('WR90TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR90Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR90Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR90StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR90FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR90Charge').value = DataObjectOut.CHARGEDATA;
@@ -2432,7 +2365,9 @@
 			document.getElementById('WR90Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR90StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR90FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR90Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR90Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR90Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR90Statii').style= DataObjectOut.MinHeight;				
 			
 			
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2457,7 +2392,7 @@
 
 
 			document.getElementById('WR91TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR91Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR91Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR91StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR91FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR91Charge').value = DataObjectOut.CHARGEDATA;
@@ -2465,7 +2400,9 @@
 			document.getElementById('WR91Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR91StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR91FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR91Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR91Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+ 			document.getElementById('WR91Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR91Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2489,7 +2426,7 @@
 
 
 			document.getElementById('WR92TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR92Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR92Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR92StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR92FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR92Charge').value = DataObjectOut.CHARGEDATA;
@@ -2497,7 +2434,9 @@
 			document.getElementById('WR92Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR92StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR92FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR92Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR92Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR92Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR92Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2521,7 +2460,7 @@
 
 
 			document.getElementById('WR93TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR93Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR93Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR93StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR93FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR93Charge').value = DataObjectOut.CHARGEDATA;
@@ -2529,7 +2468,9 @@
 			document.getElementById('WR93Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR93StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR93FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR93Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR93Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR93Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR93Statii').style= DataObjectOut.MinHeight;				
 			
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2553,7 +2494,7 @@
 
 
 			document.getElementById('WR94TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR94Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR94Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR94StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR94FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR94Charge').value = DataObjectOut.CHARGEDATA;
@@ -2561,7 +2502,9 @@
 			document.getElementById('WR94Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR94StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR94FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR94Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR94Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR94Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR94Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2585,7 +2528,7 @@
 
 
 			document.getElementById('WR95TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR95Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR95Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR95StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR95FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR95Charge').value = DataObjectOut.CHARGEDATA;
@@ -2593,7 +2536,9 @@
 			document.getElementById('WR95Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR95StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR95FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR95Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR95Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR95Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR95Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2617,7 +2562,7 @@
 
 
 			document.getElementById('WR96TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR96Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR96Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR96StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR96FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR96Charge').value = DataObjectOut.CHARGEDATA;
@@ -2626,6 +2571,8 @@
 			document.getElementById('WR96StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR96FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR96Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR96Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR96Statii').style= DataObjectOut.MinHeight;				
 			
 
 			TempDataHead = TempDataHead + Incrementer;			
@@ -2650,7 +2597,7 @@
 
 
 			document.getElementById('WR97TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR97Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR97Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR97StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR97FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR97Charge').value = DataObjectOut.CHARGEDATA;
@@ -2659,6 +2606,8 @@
 			document.getElementById('WR97StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR97FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR97Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR97Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR97Statii').style= DataObjectOut.MinHeight;			
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2682,7 +2631,7 @@
 
 
 			document.getElementById('WR98TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR98Statii').value = DataObjectOut.STATIIDATA;	
+        //    document.getElementById('WR98Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR98StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR98FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR98Charge').value = DataObjectOut.CHARGEDATA;
@@ -2691,6 +2640,8 @@
 			document.getElementById('WR98StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR98FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR98Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+			document.getElementById('WR98Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR98Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2723,6 +2674,8 @@
 			document.getElementById('WR99StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR99FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR99Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR99Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR99Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2746,7 +2699,7 @@
 
 
 			document.getElementById('WR100TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR100Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR100Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR100StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR100FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR100Charge').value = DataObjectOut.CHARGEDATA;
@@ -2755,6 +2708,8 @@
 			document.getElementById('WR100StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR100FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR100Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR100Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR100Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2778,7 +2733,7 @@
 
 
 			document.getElementById('WR101TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR101Statii').value = DataObjectOut.STATIIDATA;	
+         //   document.getElementById('WR101Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR101StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR101FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR101Charge').value = DataObjectOut.CHARGEDATA;
@@ -2786,7 +2741,9 @@
 			document.getElementById('WR101Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR101StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR101FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR101Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;		
+			document.getElementById('WR101Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR101Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR101Statii').style= DataObjectOut.MinHeight;				
 
 			TempDataHead = TempDataHead + Incrementer;			
 			TempDataTail = TempDataTail + Incrementer;
@@ -2810,7 +2767,7 @@
 
 
 			document.getElementById('WR102TEMP').value = DataObjectOut.FUELTEMPDATA;
-            document.getElementById('WR102Statii').value = DataObjectOut.STATIIDATA;	
+       //     document.getElementById('WR102Statii').value = DataObjectOut.STATIIDATA;	
             document.getElementById('WR102StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
             document.getElementById('WR102FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
             document.getElementById('WR102Charge').value = DataObjectOut.CHARGEDATA;
@@ -2818,10 +2775,144 @@
 			document.getElementById('WR102Statii').style.backgroundColor = DataObjectOut.ColourStatii;
 			document.getElementById('WR102StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
 			document.getElementById('WR102FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
-			document.getElementById('WR102Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;				
+			document.getElementById('WR102Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR102Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR102Statii').style= DataObjectOut.MinHeight;				
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
 
 
-			
+			document.getElementById('WR103TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR103Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR103StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR103FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR103Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR103TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR103Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR103StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR103FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR103Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR103Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR103Statii').style= DataObjectOut.MinHeight;				
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR104TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR104Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR104StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR104FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR104Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR104TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR104Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR104StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR104FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR104Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR104Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR104Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR105TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR105Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR105StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR105FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR105Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR105TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR105Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR105StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR105FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR105Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR105Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR105Statii').style= DataObjectOut.MinHeight;				
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR106TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR106Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR106StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR106FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR106Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR106TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR106Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR106StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR106FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR106Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR106Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR106Statii').style= DataObjectOut.MinHeight;							
 			
           } else {
             throw new Error('Data retrieval failed');
@@ -2845,9 +2936,15 @@
 			  DataObject.ColourStoredFault ='white';
 			  DataObject.ColourFuelLevel ='white';
 			  DataObject.ColourCHARGE = 'white';
+			  DataObject.Messages = '';	
+			  DataObject.MinHeight = '';
 			  
 			  let dataout;
-			  
+			  let LineCount = 0;
+			  let LineData = 0;
+			  let FuelTemp = 0;
+			  let FuelLevel = 0;	
+			  let ChargeLevel = 0;
 			  
 			//  DataObject.CHARGEDATA = 40;
 			  
@@ -2858,29 +2955,50 @@
 			  
 				let FUELTEMPCorrected = DataObject.FUELTEMPDATA;
 				
-				if (FUELTEMPCorrected > 4020) 
+				if (FUELTEMPCorrected > 3300) 
 				{
-					DataObject.FUELTEMPDATA = "open";
-					DataObject.ColourTEMP = 'red';	
+					DataObject.FUELTEMPDATA = "----";
+					DataObject.Messages = '----';
+					LineCount = 1;
+					FuelTemp = 1;
 				}
-				else if (FUELTEMPCorrected < 100)
+				else if (FUELTEMPCorrected < 2981)
 				{
-					DataObject.FUELTEMPDATA = "short";
-					DataObject.ColourTEMP = 'red';	
+					DataObject.FUELTEMPDATA = "----";
+					DataObject.Messages = '----';	
+					LineCount = 1;
+					FuelTemp = 1;
 				}
 				else 
 				{
 					FUELTEMPCorrected = calculateTankTempAD(FUELTEMPCorrected);	
-					if (FUELTEMPCorrected < 10) DataObject.ColourTEMP = 'red';	
-					else if (FUELTEMPCorrected < 13) DataObject.ColourTEMP = 'orange';	
-					DataObject.FUELTEMPDATA = FUELTEMPCorrected + " degC";
+					if (FUELTEMPCorrected < 10) 
+						{
+							DataObject.ColourTEMP = 'red';
+							FuelTemp = 2;
+						}
+					else if (FUELTEMPCorrected < 13) 
+						{
+							DataObject.ColourTEMP = 'orange';	
+							FuelTemp = 3;
+						}
+					else 
+						{
+							FuelTemp = 4;
+						}
+						
+					DataObject.FUELTEMPDATA = FUELTEMPCorrected  + String.fromCharCode(176) + 'C';
+					
 				}
 			}
 			
 			else 
 				{
 				  DataObject.FUELTEMPDATA = 'No Data';
+				  DataObject.Messages = '----';
 				  DataObject.ColourTEMP = 'red';
+				  LineCount = 1;
+				  FuelTemp = 1;
 				 }
 				 
 				 
@@ -2894,22 +3012,42 @@
 					decimalFuelLevelConverted = decimalFuelLevelConverted + 107.1611;
 
 					// Ensure the result is between 0 and 100
-					if (decimalFuelLevelConverted > 100) {
+					if (decimalFuelLevelConverted > 100)
+					{
 					  decimalFuelLevelConverted= 100;
-					} else if (decimalFuelLevelConverted < 0) {
+					} 
+					else if (decimalFuelLevelConverted < 0)
+					{
 					  decimalFuelLevelConverted = 0;
 					}
 					
-				   if (decimalFuelLevelConverted < DataObject.FuelLevelMin)  DataObject.ColourFuelLevel = 'red';
+					if (decimalFuelLevelConverted < DataObject.FuelLevelMin)  
+				    {
+						DataObject.ColourFuelLevel = 'red';
+						FuelLevel = 2;
+					}
+				   else if (decimalFuelLevelConverted < 48)  
+				    {
+						DataObject.ColourFuelLevel = 'orange';
+						FuelLevel = 3;
+					}					
+			
+					else 
+					{
+						FuelLevel = 4;									
+					}
 					
 					DataObject.FUELLEVELDATA = Math.round(decimalFuelLevelConverted) + '%';
 					
-
 				}
 			else 
 				{
 				  DataObject.FUELLEVELDATA = 'No Data';
 				  DataObject.ColourFuelLevel = 'red';
+				  FuelLevel = 1;
+				  DataObject.Messages = '----';
+				  LineCount = 1;
+				  
 				}	
 
 			 if (DataObject.CHARGEDATA != 'XX' && DataObject.FUELLEVELDATA != 'YY')
@@ -2917,9 +3055,23 @@
 				
 					DataObject.CHARGEDATA = parseInt(DataObject.CHARGEDATA, 16)				
 				
-					if (DataObject.CHARGEDATA < 25) DataObject.ColourCHARGE = 'red';				
-					else if (DataObject.CHARGEDATA < 45) DataObject.ColourCHARGE = 'orange';					
-
+					if (DataObject.CHARGEDATA < 25) 
+					{
+						DataObject.ColourCHARGE = 'red';
+						ChargeLevel = 2;
+						
+					}	
+					else if (DataObject.CHARGEDATA < 45) 
+					{
+						DataObject.ColourCHARGE = 'orange';					
+						ChargeLevel = 3;
+					
+					}
+					else 
+					{
+						ChargeLevel = 4;	
+											
+					}
 					
 					DataObject.CHARGEDATA = DataObject.CHARGEDATA + '%';
 				}
@@ -2927,6 +3079,10 @@
 				{
 				  DataObject.CHARGEDATA = 'No Data';
 				  DataObject.ColourCHARGE = 'red';
+				  ChargeLevel = 1;	
+				  DataObject.Messages = '----';
+				  LineCount ++;
+				  
 				}
 
 			 if (DataObject.STATIIDATA == 'XXXX' || DataObject.STATIIDATA == 'YYYY')
@@ -2935,9 +3091,8 @@
 				DataObject.ColourStatii = 'red';
 			 }
 			 else 
-			 {
-			 	//DataObject.STOREDSTATIIDATA = DataObject.STATIIDATA;
-			
+				 {
+				 /*
 			    const decimalValue = parseInt(DataObject.STATIIDATA, 16);
 				const binaryValue = decimalValue.toString(2);
 				DataObject.STATIIDATA = binaryValue;				
@@ -2971,36 +3126,12 @@
 					DataObject.ColourStatii = 'red';
 				}
 				
-				else DataObject.STATIIDATA = "No Active Flt";
-				
-				/*
-				
-                                        Relay1nConnected = FindStatus(STATII_Data, 0, 15); // 0 
-                                        Relay1DRV_ON = FindStatus(STATII_Data, 1, 15);
-                                        Relay1_OVercurrent_Fault = FindStatus(STATII_Data, 2, 15);
-
-                                        Fuse1_Status = FindStatus(STATII_Data, 4, 15);
-                                        Element1_Status = FindStatus(STATII_Data, 3, 15);
-                                        ECU_ONline = FindStatus(STATII_Data, 5, 15);
-                                        ECU_ONline = '1';
-                                        Relay2nConnected = FindStatus(STATII_Data, 6, 15);  // 6
-                                        Relay2DRV_ON = FindStatus(STATII_Data, 7, 15);
-                                        Relay2_OVercurrent_Fault = FindStatus(STATII_Data, 8, 15);
-                                        Fuse2_Status = FindStatus(STATII_Data, 9, 15);
-                                        Element2_Status = FindStatus(STATII_Data, 10, 15);
-                                        Contactor_RTN_Status = FindStatus(STATII_Data, 11, 15);
-                                        nContactor_Ground_Connected = FindStatus(STATII_Data, 12, 15);
-                                        Contactor_OverCurrentFault = FindStatus(STATII_Data, 13, 15);
-                                        ContactorDRV_ON = FindStatus(STATII_Data, 15, 15);
-				
 				*/
 				
-				
-				
-				
-				
-				
-			 }
+				//else DataObject.STATIIDATA = "scroll- \n No Active Flt \n battery requires charging";
+				 
+				}
+
 
 			 if (DataObject.STOREDSTATIIDATA == 'XXXX' || DataObject.STOREDSTATIIDATA== 'YYYY')
 			 {
@@ -3010,37 +3141,133 @@
 			 else 
 			 {
 			    const decimalValue1 = parseInt(DataObject.STOREDSTATIIDATA, 16);
-				const binaryValue1 = decimalValue1.toString(2);
+				const TemperatureValue = decimalValue1.toString() -5;
 				
 
-				DataObject.STOREDSTATIIDATA = binaryValue1;
+				DataObject.STOREDSTATIIDATA = TemperatureValue + String.fromCharCode(176) + 'C';
 				
-				dataout = DataObject.STOREDSTATIIDATA.toString();
-				dataout = dataout.padStart(16, "0");	
-
+									
+				// fueldata = 1 = ----
+				// fuel data = 2 = critical
+				// 3 temp low
+				// 4 OK
 				
-				DataObject.STOREDSTATIIDATA = "No Stored Flt";
+			 //let FuelTemp = 0;
+			 // let FuelLevel = 0;	
+			 // let ChargeLevel = 0;
 				
-                //if (dataout[9] == '1')  DataObject.STOREDSTATIIDATA = "0040 Contactor Coil circuit Open";
-                //if (dataout[8] == '1')  DataObject.STOREDSTATIIDATA = "0080 Contactor Coil circuit Overload";
-                //if (dataout[7] == '1')  DataObject.STOREDSTATIIDATA = "0100 Contactor driver GND Circuit Open";
-			
-                if (dataout[11] == '1') DataObject.STOREDSTATIIDATA = "0010 ClntV SC";
-                else if (dataout[10] == '1') DataObject.STOREDSTATIIDATA = "0020 ClntV OC";					
-                else if (dataout[6] == '1')  DataObject.STOREDSTATIIDATA = "0200 Temp OC ";
-                else if (dataout[5] == '1')  DataObject.STOREDSTATIIDATA = "0400 Temp SC ";
-                else if (dataout[4] == '1')  DataObject.STOREDSTATIIDATA = "0800 FS1 Open";
-                else if (dataout[3] == '1')  DataObject.STOREDSTATIIDATA = "1000 FS2 Open";
-                else if (dataout[2] == '1')  DataObject.STOREDSTATIIDATA = "2000 HTR 1 OC";
-                else if (dataout[1] == '1')  DataObject.STOREDSTATIIDATA = "4000 HTR 2 OC";			 
-                else if (dataout[15] == '1') DataObject.STOREDSTATIIDATA = "0001 ECU FLT"; // Relay 1 OC
-                else if (dataout[14] == '1') DataObject.STOREDSTATIIDATA = "0002 ECU FLT"; // Relay 1 SC
-                else if (dataout[13] == '1') DataObject.STOREDSTATIIDATA = "0004 ECU FLT"; // Relay 2 OC
-                else if (dataout[12] == '1') DataObject.STOREDSTATIIDATA = "0008 ECU FLT"; // Relay 2 SC			 
 			 
 			 }
+				
+			 
+				if (FuelTemp == 1 && FuelTemp == 1 && ChargeLevel == 1)
+				{
+					DataObject.Messages = "----";
+					DataObject.MinHeight = "min-height: 14px";
+					LineCount = 1;
+				}
+				else if (FuelTemp == 2)
+				{
+					DataObject.Messages = "WARNING-Fuel Temp Critically low!";	
+					LineCount = 2;
+				}
+				
+				else if (FuelTemp == 3)
+				{
+					DataObject.Messages = "Fuel Temp low.";	
+					LineCount = 1;
+				}
 			
-						
+				if (FuelLevel == 2)
+				{
+					if (FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
+					else if (FuelTemp == 1) DataObject.Messages = '';
+					DataObject.Messages = DataObject.Messages +  "Fuel Heating disabled-Fuel level less than 40%.";	
+					LineCount = LineCount + 4;
+				}	
+				else if (FuelLevel == 3)
+				{
+					if (FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
+					else if (FuelTemp == 1) DataObject.Messages = '';					
+					DataObject.Messages = DataObject.Messages + "Fuel level low, approaching 40%.";	
+					LineCount = LineCount + 3;
+				}
+				
+				if (ChargeLevel == 2)
+				{
+					if (FuelTemp == 1 && FuelLevel == 1) DataObject.Messages = '';	
+					else if (FuelLevel == 2 || FuelLevel == 3 || FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
+					DataObject.Messages = DataObject.Messages + "WARNING-Vehicle Battery charge level critically low, start vehicle or charge battery immediately.";	
+					LineCount = LineCount + 7;
+				}			
+				else if (ChargeLevel == 3)
+				{
+					if (FuelLevel == 2 || FuelLevel == 3 || FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + "\n";
+					DataObject.Messages = DataObject.Messages + "Vehicle Battery charge level low.";	
+					LineCount = LineCount +2 ;
+				}	
+
+				if (LineCount == 0) 
+				{
+					DataObject.Messages = "System OK";
+					DataObject.MinHeight = "min-height: 14px";	
+				}	
+				else if (LineCount == 1)
+				{				
+					DataObject.MinHeight = "min-height: 14px";	
+				}
+				else if (LineCount == 2)
+				{				
+					DataObject.MinHeight = "min-height: 28px";	
+				}
+				else if (LineCount == 3)
+				{				
+					DataObject.MinHeight = "min-height: 42px";	
+				}				
+				else if (LineCount == 4)
+				{				
+					DataObject.MinHeight = "min-height: 56px";	
+				}
+				else if (LineCount == 5)
+				{				
+					DataObject.MinHeight = "min-height: 70px";	
+				}				
+				else if (LineCount == 6)
+				{				
+					DataObject.MinHeight = "min-height: 84px";	
+				}	
+				else if (LineCount == 7)
+				{				
+					DataObject.MinHeight = "min-height: 98px";	
+				}
+				else if (LineCount == 8)
+				{				
+					DataObject.MinHeight = "min-height: 112px";	
+				}				
+				else if (LineCount == 9)
+				{				
+					DataObject.MinHeight = "min-height: 126px";	
+				}	
+				else if (LineCount == 10)
+				{				
+					DataObject.MinHeight = "min-height: 140px";	
+				}
+				else if (LineCount == 11)
+				{				
+					DataObject.MinHeight = "min-height: 156px";	
+				}
+				else if (LineCount == 12)
+				{				
+					DataObject.MinHeight = "min-height: 168px";	
+				}	
+				else if (LineCount == 13)
+				{				
+					DataObject.MinHeight = "min-height: 182px";	
+				}
+				else if (LineCount == 14)
+				{				
+					DataObject.MinHeight = "min-height: 196px";	
+				}				
 			return DataObject;
 		} 	  
 	  
