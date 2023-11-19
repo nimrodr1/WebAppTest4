@@ -604,7 +604,79 @@
       <input type="text" id="WR106StoredFaults" placeholder="Stored Faults"  />
       <input type="text" id="WR106FuelLevel" placeholder=" FuelLevel"  />
       <input type="text" id="WR106Charge" placeholder="  Charge"   />
-	<textarea id="WR106Statii" placeholder="  Statii  " class="fault-font"></textarea>		
+	<textarea id="WR106Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR107___</label>
+	  <input type="text" id="WR107TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR107StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR107FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR107Charge" placeholder="  Charge"   />
+	<textarea id="WR107Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR108___</label>
+	  <input type="text" id="WR108TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR108StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR108FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR108Charge" placeholder="  Charge"   />
+	<textarea id="WR108Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR109___</label>
+	  <input type="text" id="WR109TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR109StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR109FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR109Charge" placeholder="  Charge"   />
+	<textarea id="WR109Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR110___</label>
+	  <input type="text" id="WR110TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR110StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR110FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR110Charge" placeholder="  Charge"   />
+	<textarea id="WR110Statii" placeholder="  Statii  " class="fault-font"></textarea>
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR111___</label>
+	  <input type="text" id="WR111TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR111StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR111FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR111Charge" placeholder="  Charge"   />
+	<textarea id="WR111Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR112___</label>
+	  <input type="text" id="WR112TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR112StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR112FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR112Charge" placeholder="  Charge"   />
+	<textarea id="WR112Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR113___</label>
+	  <input type="text" id="WR113TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR113StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR113FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR113Charge" placeholder="  Charge"   />
+	<textarea id="WR113Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR114___</label>
+	  <input type="text" id="WR114TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR114StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR114FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR114Charge" placeholder="  Charge"   />
+	<textarea id="WR114Statii" placeholder="  Statii  " class="fault-font"></textarea>	
+    </div>
+    <div id="fuel-temperature-container"style="margin-top: 0.1in;">
+      <label class="label">WR115___</label>
+	  <input type="text" id="WR115TEMP" placeholder="  Fuel Temp  "/> 
+      <input type="text" id="WR115StoredFaults" placeholder="Stored Faults"  />
+      <input type="text" id="WR115FuelLevel" placeholder=" FuelLevel"  />
+      <input type="text" id="WR115Charge" placeholder="  Charge"   />
+	<textarea id="WR115Statii" placeholder="  Statii  " class="fault-font"></textarea>		
     <script>	  
       // Your JavaScript code goes here
       // Function to fetch and display data
@@ -2912,7 +2984,349 @@
 			document.getElementById('WR106FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
 			document.getElementById('WR106Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
 			document.getElementById('WR106Statii').value = DataObjectOut.Messages;	
-			document.getElementById('WR106Statii').style= DataObjectOut.MinHeight;							
+			document.getElementById('WR106Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR107TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR107Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR107StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR107FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR107Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR107TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR107Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR107StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR107FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR107Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR107Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR107Statii').style= DataObjectOut.MinHeight;
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR108TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR108Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR108StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR108FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR108Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR108TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR108Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR108StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR108FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR108Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR108Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR108Statii').style= DataObjectOut.MinHeight;		
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR109TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR109Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR109StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR109FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR109Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR109TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR109Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR109StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR109FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR109Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR109Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR109Statii').style= DataObjectOut.MinHeight;		
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR110TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR110Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR110StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR110FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR110Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR110TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR110Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR110StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR110FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR110Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR110Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR110Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR111TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR111Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR111StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR111FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR111Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR111TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR111Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR111StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR111FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR111Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR111Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR111Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR112TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR112Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR112StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR112FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR112Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR112TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR112Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR112StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR112FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR112Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR112Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR112Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR112TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR112Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR112StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR112FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR112Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR112TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR112Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR112StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR112FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR112Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR112Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR112Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR113TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR113Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR113StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR113FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR113Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR113TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR113Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR113StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR113FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR113Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR113Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR113Statii').style= DataObjectOut.MinHeight;	
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR114TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR114Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR114StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR114FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR114Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR114TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR114Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR114StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR114FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR114Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR114Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR114Statii').style= DataObjectOut.MinHeight;		
+
+			TempDataHead = TempDataHead + Incrementer;			
+			TempDataTail = TempDataTail + Incrementer;
+			StatiiHead = StatiiHead + Incrementer;
+			StatiiTail = StatiiTail + Incrementer;
+			StoredStatiiHead = StoredStatiiHead + Incrementer;
+			StoredStatiiTail = StoredStatiiTail + Incrementer;
+			FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+			FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+			ChargeDataHead = ChargeDataHead + Incrementer;
+			ChargeDataTail = ChargeDataTail + Incrementer;	
+
+		
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail); 	
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail); 
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail); 			
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);  
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail); 
+
+			DataObjectOut = ProcessData(DataObjectIn);	
+
+
+			document.getElementById('WR115TEMP').value = DataObjectOut.FUELTEMPDATA;
+       //     document.getElementById('WR115Statii').value = DataObjectOut.STATIIDATA;	
+            document.getElementById('WR115StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR115FuelLevel').value = DataObjectOut.FUELLEVELDATA;		
+            document.getElementById('WR115Charge').value = DataObjectOut.CHARGEDATA;
+			document.getElementById('WR115TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;	
+			document.getElementById('WR115Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+			document.getElementById('WR115StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+			document.getElementById('WR115FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;	
+			document.getElementById('WR115Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;	
+			document.getElementById('WR115Statii').value = DataObjectOut.Messages;	
+			document.getElementById('WR115Statii').style= DataObjectOut.MinHeight;					
+
+			
 			
           } else {
             throw new Error('Data retrieval failed');
