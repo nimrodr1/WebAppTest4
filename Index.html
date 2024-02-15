@@ -1238,7 +1238,18 @@
       <input type = "text" id="WR150Charge" placeholder="  Charge" />
     <textarea id = "WR150Statii" placeholder="  Statii  " class="fault-font"></textarea>
 
-    </div>	
+	
+    </div>
+    <div id = "fuel-temperature-container"style = "margin-top: 0.1in;" >
+      <label class="label">ECU_220_</label>
+      <input type = "text" id="WR220TEMP" placeholder="  Fuel Temp  "/>
+      <input type = "text" id="WR220StoredFaults" placeholder="Stored Faults"  />
+      <input type = "text" id="WR220FuelLevel" placeholder=" FuelLevel"  />
+      <input type = "text" id="WR220Charge" placeholder="  Charge" />
+    <textarea id = "WR220Statii" placeholder="  Statii  " class="fault-font"></textarea>
+
+    </div>		
+	
 	
 	
     <script>	  
@@ -6068,8 +6079,41 @@
             document.getElementById('WR150Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
             document.getElementById('WR150Statii').value = DataObjectOut.Messages;
             document.getElementById('WR150Statii').style = DataObjectOut.MinHeight;
-
 			
+			//*************** below is heaterbattery ECU spare
+
+            TempDataHead = TempDataHead + Incrementer;
+            TempDataTail = TempDataTail + Incrementer;
+            StatiiHead = StatiiHead + Incrementer;
+            StatiiTail = StatiiTail + Incrementer;
+            StoredStatiiHead = StoredStatiiHead + Incrementer;
+            StoredStatiiTail = StoredStatiiTail + Incrementer;
+            FuelLevelDataHead = FuelLevelDataHead + Incrementer;
+            FuelLevelDataTail = FuelLevelDataTail + Incrementer;
+            ChargeDataHead = ChargeDataHead + Incrementer;
+            ChargeDataTail = ChargeDataTail + Incrementer;
+
+
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail);
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail);
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail);
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail);
+
+
+            DataObjectOut = ProcessData(DataObjectIn);
+            document.getElementById('WR220TEMP').value = DataObjectOut.FUELTEMPDATA;
+            //     document.getElementById('WR220Statii').value = DataObjectOut.STATIIDATA;
+            document.getElementById('WR220StoredFaults').value = DataObjectOut.STOREDSTATIIDATA;
+            document.getElementById('WR220FuelLevel').value = DataObjectOut.FUELLEVELDATA;
+            document.getElementById('WR220Charge').value = DataObjectOut.CHARGEDATA;
+            document.getElementById('WR220TEMP').style.backgroundColor = DataObjectOut.ColourTEMP;
+            document.getElementById('WR220Statii').style.backgroundColor = DataObjectOut.ColourStatii;
+            document.getElementById('WR220StoredFaults').style.backgroundColor = DataObjectOut.ColourStoredFault;
+            document.getElementById('WR220FuelLevel').style.backgroundColor = DataObjectOut.ColourFuelLevel;
+            document.getElementById('WR220Charge').style.backgroundColor = DataObjectOut.ColourCHARGE;
+            document.getElementById('WR220Statii').value = DataObjectOut.Messages;
+            document.getElementById('WR220Statii').style = DataObjectOut.MinHeight;			
 
 			
 			
