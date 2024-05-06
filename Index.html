@@ -10,7 +10,7 @@
         align-items: center;
       }
 	  
-	  /* ver11B24*/
+	  /* ver11B25*/
 
 
       /* Style the fuel temperature container */
@@ -141,17 +141,18 @@
 		the Battery Charge level <u>GREATER than 25%</u></h2>
 		
 
+    </div>
     </div class="inline-container">
-    <div id = "fuel-temperature-container"style = "margin-top: 0.1in;" >
+    <div id = "fuel-temperature-container999"style = "margin-top: 0.1in;" >
       <label class="fixed-width-label">Vehicle Reg</label>
-      <label class="fixed-width-label1">ECU No </label>	  
+      <label class="fixed-width-label1">ECU No</label>	  
       <input type = "text" id="FUELTEMP" class="inline-item" placeholder="  Fuel Temp  "/>
       <input type = "text" id="STRDFAULTS" class="inline-item" placeholder="Stored Faults"  />
       <input type = "text" id="FUELLEVEL" class="inline-item" placeholder=" FuelLevel"  />
       <input type = "text" id="CHARGE"  class="inline-item" placeholder="  Charge" />
     <textarea id = "STATII" class="inline-textarea1" placeholder="  Statii  "></textarea>
     </div>
-
+	
 
     </div class="inline-container">
     <div id = "fuel-temperature-container10"style = "margin-top: 0.1in;" >
@@ -2072,9 +2073,10 @@
 			let Incrementer = 34; //26;
 			let ECU_NO = 10;
 			
-			let container = document.getElementById('fuel-temperature-container');
+			let container = document.getElementById('fuel-temperature-container999');
             let label = container.querySelector('.fixed-width-label');
-            label.innerText = "VEHICLE REG";
+            label.innerText = "VEHICLE";
+		//	label.text-align = left;
             label = container.querySelector('.fixed-width-label1');
             label.innerText = "ECU No";
 			   
