@@ -1,147 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MERCURY FUEL SYSTEMS</title>
-    <style>
-      body {
-        background-color:lightgrey; /* powderblue is a possibility*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-	  
-
-	  
-    </style>
-  </head>
-  <body>
-    <h1>MERCURY FUEL SYSTEMS</h1>
-</h2>
-
-
-
 <div class="container" data-name="container-1">
-  <!-- Column 1 -->
-  <div class="column">
-    <input type="text" class="text-box top-box" data-name="box-1-1" placeholder="Box 1-1" />
-    <input type="text" class="text-box bottom-box" data-name="box-1-2" placeholder="Box 1-2" />
-  </div>
-
-  <!-- Column 2 -->
-  <div class="column">
-    <input type="text" class="text-box top-box" data-name="box-2-1" placeholder="Box 2-1" />
-    <input type="text" class="text-box bottom-box" data-name="box-2-2" placeholder="Box 2-2" />
-  </div>
-
-  <!-- Column 3 -->
-  <div class="column">
-    <input type="text" class="text-box top-box" data-name="box-3-1" placeholder="Box 3-1" />
-    <input type="text" class="text-box bottom-box" data-name="box-3-2" placeholder="Box 3-2" />
-  </div>
-
-  <!-- Column 4 -->
-  <div class="column">
-    <input type="text" class="text-box top-box" data-name="box-4-1" placeholder="Box 4-1" />
-    <input type="text" class="text-box bottom-box" data-name="box-4-2" placeholder="Box 4-2" />
-  </div>
-
-  <!-- Column 5 -->
-  <div class="column">
-    <input type="text" class="text-box top-box" data-name="box-5-1" placeholder="Box 5-1" />
-    <input type="text" class="text-box bottom-box" data-name="box-5-2" placeholder="Box 5-2" />
-  </div>
-</div>
-
-<!-- You can add more containers with unique data-name attributes -->
-<div class="container" data-name="container-2">
   <!-- Columns with textboxes similar to the first container -->
   <div class="column">
     <input type="text" class="text-box top-box" data-name="box-1-1" placeholder="Box 1-1" />
     <input type="text" class="text-box bottom-box" data-name="box-1-2" placeholder="Box 1-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-1-3" placeholder="Box 1-3" />
+	
   </div>
   <!-- Column 2 -->
   <div class="column">
     <input type="text" class="text-box top-box" data-name="box-2-1" placeholder="Box 2-1" />
     <input type="text" class="text-box bottom-box" data-name="box-2-2" placeholder="Box 2-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-2-3" placeholder="Box 2-3" />
   </div>
 
   <!-- Column 3 -->
   <div class="column">
     <input type="text" class="text-box top-box" data-name="box-3-1" placeholder="Box 3-1" />
     <input type="text" class="text-box bottom-box" data-name="box-3-2" placeholder="Box 3-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-3-3" placeholder="Box 3-3" />
   </div>
 
   <!-- Column 4 -->
   <div class="column">
     <input type="text" class="text-box top-box" data-name="box-4-1" placeholder="Box 4-1" />
     <input type="text" class="text-box bottom-box" data-name="box-4-2" placeholder="Box 4-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-4-3" placeholder="Box 4-3" />	
   </div>
 
   <!-- Column 5 -->
   <div class="column">
     <input type="text" class="text-box top-box" data-name="box-5-1" placeholder="Box 5-1" />
     <input type="text" class="text-box bottom-box" data-name="box-5-2" placeholder="Box 5-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-5-3" placeholder="Box 5-3" />
   </div>
+  
+  
+        <!-- Bottom Text Box -->
+    <input type="text" class="text-box bottom-text-box" data-name="bottom-box-1" placeholder="Bottom Text Box" />
+
+  
 </div>
-
-
-
-<!-- CSS for layout and styling -->
-<style>
-
-
-  .container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Five equal-width columns */
-    gap: 0px; /* Space between columns */
-    margin: 20px; /* Margin around the whole container */
-  }
-
-  .column {
-    display: flex;
-    flex-direction: column; /* Stack two text boxes vertically */
-  }
-
-  .text-box {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    margin: 0;
-    box-sizing: border-box; /* Ensure padding and border don't affect overall size */
-  }
-
-  .top-box {
-    border-bottom: none; /* Remove bottom border of the top box to connect it to the bottom box */
-    border-top-left-radius: 5px; /* Round the top-left corner */
-    border-top-right-radius: 5px; /* Round the top-right corner */
-	font-weight: bold; /* Make text in top boxes bold */
-  }
-
-  .bottom-box {
-    border-top-left-radius: 0; /* No rounding on the top corners */
-    border-top-right-radius: 0; /* No rounding on the top corners */
-    border-bottom-left-radius: 5px; /* Round the bottom-left corner */
-    border-bottom-right-radius: 5px; /* Round the bottom-right corner */
-    margin-top: -1px; /* This ensures no gap between the top and bottom boxes */
-  }
-
-  .column .text-box:focus {
-    border-color: #007bff; /* Highlight the borders of focused text boxes */
-  }
-</style>
-
-<script>
-  // Function to change the value of a specific text box
-  function updateTextBox(columnId, boxId, newValue) {
-    // Find the specific text box using its ID and update its value
-    document.getElementById(boxId).value = newValue;
-  }
-
-  // Example usage:
-  // Update the value of the top box in column 1 (box-1-1)
-  updateTextBox("column-1", "box-1-1", "Vehicle Reg");
-  updateTextBox("column-1", "box-1-2", "NA12 NFM");
-
-
-</script>
