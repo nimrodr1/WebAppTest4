@@ -1,3 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MERCURY FUEL SYSTEMS</title>
+    <style>
+      body {
+        background-color:lightgrey; /* powderblue is a possibility*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+	  
+
+	  
+    </style>
+	
+	
+  </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Column Text Boxes with Bottom Box</title>
+  <body>
+    <h1>MERCURY FUEL SYSTEMS</h1>
+</h2>
+
+
+
 <div class="container" data-name="container-1">
   <!-- Columns with textboxes similar to the first container -->
   <div class="column">
@@ -40,3 +67,218 @@
 
   
 </div>
+
+<!-- You can add more containers with unique data-name attributes -->
+<div class="container" data-name="container-2">
+  <!-- Columns with textboxes similar to the first container -->
+  <div class="column">
+    <input type="text" class="text-box top-box" data-name="box-1-1" placeholder="Box 1-1" />
+    <input type="text" class="text-box bottom-box" data-name="box-1-2" placeholder="Box 1-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-1-3" placeholder="Box 1-3" />
+	
+  </div>
+  <!-- Column 2 -->
+  <div class="column">
+    <input type="text" class="text-box top-box" data-name="box-2-1" placeholder="Box 2-1" />
+    <input type="text" class="text-box bottom-box" data-name="box-2-2" placeholder="Box 2-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-2-3" placeholder="Box 2-3" />
+  </div>
+
+  <!-- Column 3 -->
+  <div class="column">
+    <input type="text" class="text-box top-box" data-name="box-3-1" placeholder="Box 3-1" />
+    <input type="text" class="text-box bottom-box" data-name="box-3-2" placeholder="Box 3-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-3-3" placeholder="Box 3-3" />
+  </div>
+
+  <!-- Column 4 -->
+  <div class="column">
+    <input type="text" class="text-box top-box" data-name="box-4-1" placeholder="Box 4-1" />
+    <input type="text" class="text-box bottom-box" data-name="box-4-2" placeholder="Box 4-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-4-3" placeholder="Box 4-3" />	
+  </div>
+
+  <!-- Column 5 -->
+  <div class="column">
+    <input type="text" class="text-box top-box" data-name="box-5-1" placeholder="Box 5-1" />
+    <input type="text" class="text-box bottom-box" data-name="box-5-2" placeholder="Box 5-2" />
+	<input type="text" class="text-box bottom-box" data-name="box-5-3" placeholder="Box 5-3" />
+  </div>
+  
+  
+        <!-- Bottom Text Box -->
+    <input type="text" class="text-box bottom-text-box" data-name="bottom-box-1" placeholder="Bottom Text Box" />
+
+  
+</div>
+  
+  
+</div>
+
+
+
+<!-- CSS for layout and styling -->
+<style>
+
+
+  .container {
+            background-color: lightgrey; /* Background color for the container */
+            padding: 10px; /* Padding around the container */
+            border-radius: 5px; /* Rounded corners */
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Allow wrapping to the next line */
+            margin-bottom: 20px; /* Space between containers */
+  }
+  
+          .hidden {
+
+            background-color: transparent; /* Match this to the container background */
+            color: lightgrey; /* Match text color to background for invisibility */
+            border: none; /* Match the border color as well */
+            cursor: default; /* Change cursor to default */
+			box-shadow: none; /* Remove any shadow */
+			outline: none; /* Remove focus outline */
+			margin: none;
+			visibility: hidden;
+        }
+
+  .column {
+            flex: 1 1 calc(20% - 10px); /* Each column takes 20% width minus margin */
+            margin: none; /* Margin between columns */
+            min-width: 150px; /* Minimum width for responsive design */
+  }
+
+  .text-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin: 0;
+    box-sizing: border-box; /* Ensure padding and border don't affect overall size */
+  }
+
+  .top-box {
+    border-bottom: none; /* Remove bottom border of the top box to connect it to the bottom box */
+    border-top-left-radius: 5px; /* Round the top-left corner */
+    border-top-right-radius: 5px; /* Round the top-right corner */
+	font-weight: bold; /* Make text in top boxes bold */
+  }
+
+  .bottom-box {
+    border-top-left-radius: 0; /* No rounding on the top corners */
+    border-top-right-radius: 0; /* No rounding on the top corners */
+    border-bottom-left-radius: 5px; /* Round the bottom-left corner */
+    border-bottom-right-radius: 5px; /* Round the bottom-right corner */
+    margin-top: -1px; /* This ensures no gap between the top and bottom boxes */
+  }
+
+  .bottom-text-box {
+            flex-basis: 100%; /* Take full width of the container */
+            margin-top: none; /* Space above the bottom text box */
+            padding: 10px; /* Padding inside the bottom text box */
+            border: 1px solid #ccc; /* Border color */
+            border-radius: 3px; /* Rounded corners */
+
+
+        }
+  
+         .full-width {
+            width: calc(100% - 20px); /* Full width minus margins from the columns */
+            margin-left: 10px; /* Align with the left margin of the columns */
+			}
+  
+
+  .column .text-box:focus {
+    border-color: #007bff; /* Highlight the borders of focused text boxes */
+	
+	
+	
+  }
+</style>
+
+<script>
+  // Function to update the value of a specific text box in a specific container
+  function updateTextBox(containerName, boxName, newValue) {
+    // Find the container by its data-name attribute
+    const container = document.querySelector(`.container[data-name="${containerName}"]`);
+
+    if (container) {
+      // Find the specific text box inside the container by its data-name
+      const textBox = container.querySelector(`input[data-name="${boxName}"]`);
+      
+      if (textBox) {
+        // Update the value of the text box
+        textBox.value = newValue;
+      } else {
+        console.log(`Text box with data-name "${boxName}" not found in container "${containerName}"`);
+      }
+    } else {
+      console.log(`Container with data-name "${containerName}" not found`);
+    }
+  }
+  
+  // Function to hide a specific text box
+  
+        function hideTextBox(containerName, boxName) {
+            const textBox = document.querySelector(`.container[data-name="${containerName}"] input[data-name="${boxName}"]`);
+            if (textBox) {
+                textBox.classList.add('hidden'); // Add the hidden class to change color and border
+            } else {
+                console.log(`Text box ${boxName} not found in container ${containerName}`);
+            }
+        }
+
+  // Example usage:
+  // Update the value of the top box in the first container (container-1, box-1-1)
+ hideTextBox("container-1", "box-2-1");  
+ hideTextBox("container-1", "box-3-1");
+ hideTextBox("container-1", "box-4-1");	
+ hideTextBox("container-1", "box-5-1");
+ 
+
+ updateTextBox("container-1", "box-1-1", "241-D-35437");
+ updateTextBox("container-1", "box-2-1", " ");
+ updateTextBox("container-1", "box-3-1", " "); 
+ updateTextBox("container-1", "box-4-1", " ");
+ updateTextBox("container-1", "box-5-1", " "); 
+   
+ updateTextBox("container-1", "box-1-2", "Autoline Reg : 241-D-3543789");
+ updateTextBox("container-1", "box-2-2", "Chassis No : 596107");
+ updateTextBox("container-1", "box-3-2", "P 320 B6x2*4NA Sleeper");
+ updateTextBox("container-1", "box-4-2", "Depot : Granco");
+ updateTextBox("container-1", "box-5-2", "VSB No : 13050");	
+  
+ updateTextBox("container-1", "box-1-3", "Fuel Temperature : 15C");
+ updateTextBox("container-1", "box-2-3", "Ambient Temperature : 13C");
+ updateTextBox("container-1", "box-3-3", "Fuel Level 28%");
+ updateTextBox("container-1", "box-4-3", "Battery Charge level : 75%");
+  
+  
+
+ hideTextBox("container-2", "box-2-1");  
+ hideTextBox("container-2", "box-3-1");
+ hideTextBox("container-2", "box-4-1");	
+ hideTextBox("container-2", "box-5-1");
+ 
+
+  updateTextBox("container-2", "box-1-1", "MV73 XDC");
+  updateTextBox("container-2", "box-2-1", " ");
+  updateTextBox("container-2", "box-3-1", " "); 
+  updateTextBox("container-2", "box-4-1", " ");
+  updateTextBox("container-2", "box-5-1", " "); 
+   
+  updateTextBox("container-2", "box-1-2", "Autoline Reg : 241-D-3543789");
+  updateTextBox("container-2", "box-2-2", "Chassis No : 596107");
+  updateTextBox("container-2", "box-3-2", "P 320 B6x2*4NA Sleeper");
+  updateTextBox("container-2", "box-4-2", "Depot : Granco");
+  updateTextBox("container-2", "box-5-2", "VSB No : 13050");	
+  
+
+
+	
+updateTextBox("container-1", "bottom-box-1", "241-D-35437fffffffffffffffffffffffffffffffffffffffffffffffffffffff11111111111111111111111111112222222222222222222222222222222222222222222222222222223333333333333333333333333333333333333");
+  // Update the value of the bottom box in the second container (container-2, box-1-2)
+
+
+
+</script>
