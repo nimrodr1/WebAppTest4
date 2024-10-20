@@ -9557,7 +9557,7 @@ datacounter = datacounter +11;
 			  DataObject.ColourStoredFault ='white';
 			  DataObject.ColourFuelLevel ='white';
 			  DataObject.ColourCHARGE = 'white';
-			  DataObject.Messages = '';	
+			  DataObject.Messages = ' ';	
 			  DataObject.MinHeight = '';
 			  
 			  let dataout;
@@ -9579,14 +9579,14 @@ datacounter = datacounter +11;
 				if (FUELTEMPCorrected > 3300) 
 				{
 					DataObject.FUELTEMPDATA = "----";
-					DataObject.Messages = '----';
+					DataObject.Messages = ' ';
 					LineCount = 1;
 					FuelTemp = 1;
 				}
 				else if (FUELTEMPCorrected < 2981)
 				{
 					DataObject.FUELTEMPDATA = "----";
-					DataObject.Messages = '----';	
+					DataObject.Messages = ' ';	
 					LineCount = 1;
 					FuelTemp = 1;
 				}
@@ -9616,7 +9616,7 @@ datacounter = datacounter +11;
 			else 
 				{
 				  DataObject.FUELTEMPDATA = '----';
-				  DataObject.Messages = '----';
+				  DataObject.Messages = ' ';
 				//  DataObject.ColourTEMP = 'red';
 				  LineCount = 1;
 				  FuelTemp = 1;
@@ -9666,7 +9666,7 @@ datacounter = datacounter +11;
 				  DataObject.FUELLEVELDATA = '----';
 				//  DataObject.ColourFuelLevel = 'red';
 				  FuelLevel = 1;
-				  DataObject.Messages = '----';
+				  DataObject.Messages = ' ';
 				  LineCount = 1;
 				  
 				}	
@@ -9701,7 +9701,7 @@ datacounter = datacounter +11;
 				  DataObject.CHARGEDATA = '----';
 				//  DataObject.ColourCHARGE = 'red';
 				  ChargeLevel = 1;	
-				  DataObject.Messages = '----';
+				  DataObject.Messages = ' ';
 				  LineCount ++;
 				  
 				}
@@ -9802,7 +9802,7 @@ datacounter = datacounter +11;
 			 
 				if (FuelTemp == 1 && FuelTemp == 1 && ChargeLevel == 1)
 				{
-					DataObject.Messages = "----";
+					DataObject.Messages = " ";
 					DataObject.MinHeight = "min-height: 14px";
 					LineCount = 1;
 				}
@@ -9821,21 +9821,21 @@ datacounter = datacounter +11;
 				if (FuelLevel == 2)
 				{
 					if (FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + ", ";
-					else if (FuelTemp == 1) DataObject.Messages = '';
+					else if (FuelTemp == 1) DataObject.Messages = ' ';
 					DataObject.Messages = DataObject.Messages +  "Fuel Heating disabled-Fuel level less than 40%.";	
 					LineCount = LineCount + 4;
 				}	
 				else if (FuelLevel == 3)
 				{
 					if (FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + ", ";
-					else if (FuelTemp == 1) DataObject.Messages = '';					
+					else if (FuelTemp == 1) DataObject.Messages = ' ';					
 					DataObject.Messages = DataObject.Messages + "Fuel level low, approaching 40%.";	
 					LineCount = LineCount + 3;
 				}
 				
 				if (ChargeLevel == 2)
 				{
-					if (FuelTemp == 1 && FuelLevel == 1) DataObject.Messages = '';	
+					if (FuelTemp == 1 && FuelLevel == 1) DataObject.Messages = ' ';	
 					else if (FuelLevel == 2 || FuelLevel == 3 || FuelTemp == 2 || FuelTemp == 3)DataObject.Messages = DataObject.Messages + ", ";
 					DataObject.Messages = DataObject.Messages + "WARNING-Vehicle Battery charge level critically low, start vehicle or charge battery immediately.";	
 					LineCount = LineCount + 7;
