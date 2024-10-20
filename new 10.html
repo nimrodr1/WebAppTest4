@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify DataType</title>
+</head>
+<body>
+    <h1>Choose a Data Type</h1>
+    
+    <!-- Dropdown Menu -->
+    <select id="dataTypeSelector">
+        <option value="String">String</option>
+        <option value="Number">Number</option>
+        <option value="Boolean">Boolean</option>
+    </select>
+
+    <!-- Paragraph to display selected data type -->
+    <p id="selectedType">Selected Data Type: String</p>
+
+    <!-- JavaScript code to handle selection -->
+    <script>
+        // Initial value for DataType
+        let DataType = "String";
+        
+        // Get the dropdown element and paragraph
+        const selector = document.getElementById('dataTypeSelector');
+        const selectedType = document.getElementById('selectedType');
+
+        // Add event listener for dropdown change
+        selector.addEventListener('change', function() {
+            // Update the DataType based on selection
+            DataType = this.value;
+            
+            // Update the paragraph to show the selected type
+            selectedType.textContent = `Selected Data Type: ${DataType}`;
+            
+            // Optional: Log the new value of DataType
+            console.log("DataType has been updated to:", DataType);
+        });
+    </script>
+</body>
+</html>
