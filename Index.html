@@ -4400,6 +4400,35 @@
        </div>
      <input type = "text" class="text-box bottom-text-box" data-name="bottom-box-1" placeholder="Bottom Text Box" />
   </div>
+  
+       <div class="container" data-name="container-144">
+       <div class="column">
+       <input type = "text" class="text-box top-box" data-name="box-1-1" placeholder="Box 1-1" />
+       <input type = "text" class="text-box bottom-box" data-name="box-1-2" placeholder="Box 1-2" />
+       <input type = "text" class="text-box bottom-box" data-name="box-1-3" placeholder="Box 1-3" />
+       </div>
+       <div class="column">
+       <input type = "text" class="text-box top-box" data-name="box-2-1" placeholder="Box 2-1" />
+       <input type = "text" class="text-box bottom-box" data-name="box-2-2" placeholder="Box 2-2" />
+       <input type = "text" class="text-box bottom-box" data-name="box-2-3" placeholder="Box 2-3" />
+       </div>
+       <div class="column">
+       <input type = "text" class="text-box top-box" data-name="box-3-1" placeholder="Box 3-1" />
+       <input type = "text" class="text-box bottom-box" data-name="box-3-2" placeholder="Box 3-2" />
+       <input type = "text" class="text-box bottom-box" data-name="box-3-3" placeholder="Box 3-3" />
+       </div>
+       <div class="column">
+       <input type = "text" class="text-box top-box" data-name="box-4-1" placeholder="Box 4-1" />
+       <input type = "text" class="text-box bottom-box" data-name="box-4-2" placeholder="Box 4-2" />
+       <input type = "text" class="text-box bottom-box" data-name="box-4-3" placeholder="Box 4-3" />
+       </div>
+       <div class="column">
+       <input type = "text" class="text-box top-box" data-name="box-5-1" placeholder="Box 5-1" />
+       <input type = "text" class="text-box bottom-box" data-name="box-5-2" placeholder="Box 5-2" />
+       <input type = "text" class="text-box bottom-box" data-name="box-5-3" placeholder="Box 5-3" />
+       </div>
+     <input type = "text" class="text-box bottom-text-box" data-name="bottom-box-1" placeholder="Bottom Text Box" />
+  </div>
 
 
 
@@ -9531,6 +9560,34 @@ datacounter = datacounter +11;
             changeColor('container-143', 'box-5-2', DataObjectOut.ColourFuelLevel);
             changeColor('container-143', 'box-5-3', DataObjectOut.ColourCHARGE);
             changeColor('container-143', 'bottom-box-1', DataObjectOut.ColourStatii);
+			
+			
+			GetDataPositions();
+            DataObjectIn.FUELTEMPDATA = data.substring(TempDataHead, TempDataTail);
+            DataObjectIn.STATIIDATA = data.substring(StatiiHead, StatiiTail);
+            DataObjectIn.STOREDSTATIIDATA = data.substring(StoredStatiiHead, StoredStatiiTail);
+            DataObjectIn.FUELLEVELDATA = data.substring(FuelLevelDataHead, FuelLevelDataTail);
+            DataObjectIn.CHARGEDATA = data.substring(ChargeDataHead, ChargeDataTail);
+            DataObjectIn.Depot = data.substring(SiteNumberHead, SiteNumberTail);
+            DataObjectIn.Model = data.substring(ModelHead, ModelTail);
+            DataObjectIn.Customer = data.substring(CustomerNumberHead, CustomerNumberTail);
+            DataObjectOut = ProcessData(DataObjectIn);
+            updateTextBox("container-144", "box-1-1", data.substring(VehicleRegLongHead, VehicleRegLongTail));
+            updateTextBox("container-144", "box-1-2", "Autoline No : " + data.substring(AutolineNumberHead, AutolineNumberTail));
+            updateTextBox("container-144", "box-1-3", "Chassis No : " + data.substring(ChassisNumberHead, ChassisNumberTail));
+            updateTextBox("container-144", "box-2-2", DataObjectOut.Customer);
+            updateTextBox("container-144", "box-2-3","Depot : " + DataObjectIn.Depot);
+            updateTextBox("container-144", "box-3-3", "VSB No : " + data.substring(VSBNumberHead, VSBNumberTail));
+            updateTextBox("container-144", "box-3-2", "Model : " + DataObjectOut.Model);
+            updateTextBox("container-144", "box-4-2", "Fuel Temperature : " + DataObjectOut.FUELTEMPDATA);
+            updateTextBox("container-144", "box-4-3", "Ambient Temperature : " + DataObjectOut.STOREDSTATIIDATA);
+            updateTextBox("container-144", "box-5-2", "Fuel Level : " + DataObjectOut.FUELLEVELDATA);
+            updateTextBox("container-144", "box-5-3", "Battery Charge Level : " + DataObjectOut.CHARGEDATA);
+            updateTextBox("container-144", "bottom-box-1", DataObjectOut.Messages);
+            changeColor('container-144', 'box-4-2', DataObjectOut.ColourTEMP);
+            changeColor('container-144', 'box-5-2', DataObjectOut.ColourFuelLevel);
+            changeColor('container-144', 'box-5-3', DataObjectOut.ColourCHARGE);
+            changeColor('container-144', 'bottom-box-1', DataObjectOut.ColourStatii);
 			 
 			 
 		
