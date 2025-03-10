@@ -13,6 +13,15 @@
             margin: 0; /* Remove default margin */
             padding: 20px; /* Add padding for better spacing */
         }
+		
+		button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 5px;
+		}
 
         h1 {
             margin-bottom: 20px; /* Space below the title */
@@ -97,6 +106,12 @@
 <body>
 
     <h1>MERCURY FUEL SYSTEMS</h1>
+	
+	<html lang="en">
+
+  <!-- <h1>Click to Download File</h1> -->
+
+    <button id="downloadBtn"style = "margin-bottom: 0.25in;"  onclick="fetchDataAndDownload()">Click to Download Excel File</button>
 	
     
     <!-- Dropdown Menu -->
@@ -4603,6 +4618,49 @@
 			  Customer : '',
 			  FaultData : '00000000000000'	
 			};
+
+      async function fetchDataAndDownload() {
+	    const button = document.getElementById('downloadBtn');
+        console.log("Button clicked, attempting to download the file...");
+		
+		button.innerText = 'Downloading...';
+        try {
+          const response = await fetch(
+            'https://warn1234.azurewebsites.net/api/file/download/vehicledata'
+          );
+          console.log("Fetch response:", response);
+
+          if (response.ok) {
+            console.log("File found, processing download...");
+
+            // Convert the response to a Blob (binary data)
+            const blob = await response.blob();
+            console.log("Blob created:", blob);
+
+            // Create a temporary URL for the Blob
+            const url = window.URL.createObjectURL(blob);
+            console.log("Temporary URL created:", url);
+
+            // Create a link element to simulate the download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'vehicledata.xlsx'; // Set the desired file name
+            document.body.appendChild(a); // Append link to body (not visible)
+            a.click(); // Simulate click to start download
+            document.body.removeChild(a); // Remove the link after the click
+            window.URL.revokeObjectURL(url); // Clean up the object URL
+
+            console.log("Download triggered.");
+			button.innerText = 'Click to Download Excel File';
+          } else {
+            console.error('Failed to fetch file:', response.statusText);
+			button.innerText = 'failed, please try again';
+          }
+        } catch (error) {
+          console.error('Error fetching file:', error);
+		  button.innerText = 'failed, please try again';
+        }
+      }	
 			
 			
   // Function to update the value of a specific text box in a specific container
@@ -10338,7 +10396,8 @@ datacounter = datacounter +11;
 
 			 if (DataObject.Model == "1") DataObject.Model = "P 320 B6x2*4NA Sleeper";
 			 else if (DataObject.Model == "2") DataObject.Model = "P 360 A4x2 NA Sleeper";
-			 else if (DataObject.Model == "3") DataObject.Model = "P 320 B 4x2 NA Day";	
+			 else if (DataObject.Model == "3") DataObject.Model = "P 320 B4x2 NA Day";	
+			 else if (DataObject.Model == "4") DataObject.Model = "G 360 A4x2 NA";																 
 			 else DataObject.Model = "---";		
 
 
